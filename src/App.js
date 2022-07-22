@@ -1,12 +1,11 @@
 import React from "react";
-import AppRouter from "./Router";
-import MainPage from "./Pages/MainPage";
+import Router from "./Router";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <AppRouter />
-      {/* <MainPage /> */}
+      <HomePage />
     </>
   );
 }
