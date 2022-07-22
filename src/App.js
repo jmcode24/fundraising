@@ -1,10 +1,12 @@
-import React from 'react';
-import MainPage from './Pages/MainPage';
+import React from "react";
+import AppRouter from "./Router";
+import MainPage from "./Pages/MainPage";
 
 function App() {
   return (
     <>
-      <MainPage />
+      <AppRouter />
+      {/* <MainPage /> */}
     </>
   );
 }
