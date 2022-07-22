@@ -1,4 +1,4 @@
-import HomePage from "./Pages/HomePage";
+import HomePage from "pages/HomePage";
 import React from "react";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 
