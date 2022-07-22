@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import Image from "./Image";
 import logo from "../images/logo.png";
