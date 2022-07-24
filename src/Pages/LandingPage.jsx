@@ -73,13 +73,14 @@ function LandingPage() {
             <Col sm={12} lg={7}>
               <h1
                 style={{
-                  fontSize: "4rem",
+                  fontSize: "3rem",
                   fontFamily: "Poppins",
                   // color: "#fff",
                   fontWeight: "bold",
                 }}
               >
-                Let's Help those who are more in need.
+                Connecting issues that matter with people who care
+                {/* Let's Help those who are more in need. */}
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -145,7 +146,7 @@ function LandingPage() {
         style={{
           padding: "8rem 0",
           clipPath: "polygon(0 15%,100% 0,100% 100%,0 100%)",
-          background: "linear-gradient(180deg,#212529,#212529 43.75%)",
+          background: "linear-gradient(180deg,#000,#000 43.75%)",
         }}
       >
         <Container>

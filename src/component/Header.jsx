@@ -2,18 +2,8 @@ import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import Image from "./Image";
 import logo from "../images/logo.png";
-<<<<<<< HEAD
+import "../index.css";
 import { Link } from "react-router-dom";
-
-export default function Header() {
-  return (
-    <Navbar variant="light" bg="light" className="py-3">
-      <Container>
-        <Navbar.Brand>
-          <h1 class="logo">FundFair</h1>
-          {/* <Image logo={logo} /> */}
-=======
-import '../index.css';
 
 export default function Header() {
   return (
@@ -21,7 +11,6 @@ export default function Header() {
       <Container>
         <Navbar.Brand href="#home">
           <Image pic={logo} />
->>>>>>> 02d9e3f09165790a9685d70b48824554bb654abc
         </Navbar.Brand>
         <Nav className="mx-auto nav-item">
           <Nav.Link href="#explore" activeKey="active">
