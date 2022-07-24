@@ -1,5 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -12,6 +13,10 @@ const Login = () => {
         justifyContent: "center",
       }}
     >
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
+
       <div
         style={{
           width: "400px",
@@ -28,7 +33,20 @@ const Login = () => {
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <p>
+            don't have an account? <Link to="/register">Regiter</Link>
+          </p>
+          <Button
+            type="submit"
+            style={{
+              backgroundColor: "#212529",
+              color: "#fff",
+              width: "200px",
+              outline: "none",
+              padding: ".5rem 1rem",
+              border: "none",
+            }}
+          >
             Submit
           </Button>
         </Form>
