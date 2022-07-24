@@ -12,3 +12,19 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.active {
+  border-bottom: whitesmoke solid 2px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+footer p {
+  color: white;
+}
+
+footer ul li {
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
