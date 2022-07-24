@@ -1,4 +1,7 @@
 import HomePage from "pages/HomePage";
+import LandingPage from "pages/LandingPage";
+import Login from "pages/Login";
+import Register from "pages/Register";
 import React from "react";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 
@@ -6,7 +9,10 @@ function Router() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* <Route path="dashboard" element={<Dashboard />}>
           <Route path="invoices" element={<Invoices />} />
