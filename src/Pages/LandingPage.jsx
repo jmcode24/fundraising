@@ -177,7 +177,6 @@ function LandingPage() {
                 style={{
                   fontSize: "3rem",
                   fontFamily: "Poppins",
-                  // color: "#fff",
                   fontWeight: "bold",
                 }}
               >
@@ -228,6 +227,14 @@ function LandingPage() {
               </p>
             </Col>
             <Col>
+              {/* <div
+                style={{
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  background: "#ffbb98",
+                }}
+              ></div> */}
               <h1
                 style={{
                   fontSize: "1.5rem",
@@ -406,6 +413,68 @@ function LandingPage() {
             </Card>
           </Col>
         </Row>
+      </Container>
+
+      {/* Get Started Area */}
+      <Container fluid style={{ backgroundColor: "#000" }}>
+        <Container
+          style={{
+            minHeight: "60vh",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Row
+            style={{
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "3rem 0",
+            }}
+          >
+            <Col sm={12} lg={7}>
+              <h1
+                style={{
+                  fontSize: "4.5rem",
+                  fontFamily: "Poppins",
+                  color: "#fff",
+                  fontWeight: "bold",
+                }}
+              >
+                Get started with FundFair.
+              </h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+                asperiores nisi, exercitationem accusantium?
+              </p>
+              <Button
+                style={{
+                  backgroundColor: "#212529",
+                  color: "#fff",
+                  width: "200px",
+                  outline: "none",
+                  padding: ".8rem 1rem",
+                  border: "none",
+                }}
+              >
+                Start a Campaign
+              </Button>
+              <Button
+                style={{
+                  marginLeft: "1rem",
+                  backgroundColor: "#fff",
+                  color: "#212329",
+                  width: "200px",
+                  outline: "none",
+                  padding: ".8rem 1rem",
+                  border: "1px solid #212329",
+                }}
+              >
+                Explore Campaigns
+              </Button>
+            </Col>
+          </Row>
+        </Container>
       </Container>
     </div>
   );
