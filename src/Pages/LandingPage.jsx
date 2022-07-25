@@ -90,12 +90,10 @@ function LandingPage() {
                 style={{
                   fontSize: "3rem",
                   fontFamily: "Poppins",
-                  // color: "#fff",
                   fontWeight: "bold",
                 }}
               >
                 Connecting issues that matter with people who care
-                {/* Let's Help those who are more in need. */}
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -137,31 +135,20 @@ function LandingPage() {
                 justifyContent: "end",
               }}
             >
-              <img
-                className="img-fluid"
-                src={Help}
-                alt="help img"
-                style={{
-                  backgroundColor: "blue",
-                  borderRadius: "50%",
-                  width: "400px",
-                  height: "400px",
-                }}
-              />
+              <img className="img-fluid" src={Help} alt="help img" />
             </Col>
           </Row>
         </Container>
       </Container>
 
       {/* How it works */}
-
       <Container
         fluid
         className=" text-white"
         style={{
           padding: "8rem 0",
           clipPath: "polygon(0 15%,100% 0,100% 100%,0 100%)",
-          background: "linear-gradient(180deg,#000,#000 43.75%)",
+          background: "linear-gradient(180deg,#02090f,#02090f 43.75%)",
         }}
       >
         <Container>
@@ -178,6 +165,7 @@ function LandingPage() {
                   fontSize: "3rem",
                   fontFamily: "Poppins",
                   fontWeight: "bold",
+                  paddingTop: "3rem",
                 }}
               >
                 Fundraising on FundFair takes just a few clicks
@@ -192,9 +180,29 @@ function LandingPage() {
           <Row
             style={{
               padding: "3rem 0",
+              textAlign: "center",
             }}
           >
-            <Col>
+            <Col sm={12} md={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                1
+              </div>
               <h1
                 style={{
                   fontSize: "1.5rem",
@@ -210,7 +218,27 @@ function LandingPage() {
                 omnis praesentium perferendis fugit ex provident deserunt
               </p>
             </Col>
-            <Col>
+
+            <Col sm={12} md={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                2
+              </div>
               <h1
                 style={{
                   fontSize: "1.5rem",
@@ -226,15 +254,28 @@ function LandingPage() {
                 omnis praesentium perferendis fugit ex provident deserunt
               </p>
             </Col>
-            <Col>
-              {/* <div
+
+            <Col sm={12} md={4}>
+              <div
                 style={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  background: "#ffbb98",
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
                 }}
-              ></div> */}
+              >
+                3
+              </div>
+
               <h1
                 style={{
                   fontSize: "1.5rem",
@@ -416,7 +457,7 @@ function LandingPage() {
       </Container>
 
       {/* Get Started Area */}
-      <Container fluid style={{ backgroundColor: "#000" }}>
+      <Container fluid style={{ backgroundColor: "#02090f", color: "#fff" }}>
         <Container
           style={{
             minHeight: "60vh",
@@ -449,7 +490,7 @@ function LandingPage() {
               </p>
               <Button
                 style={{
-                  backgroundColor: "#212529",
+                  backgroundColor: "#00e472",
                   color: "#fff",
                   width: "200px",
                   outline: "none",
@@ -457,20 +498,21 @@ function LandingPage() {
                   border: "none",
                 }}
               >
-                Start a Campaign
+                Register
               </Button>
               <Button
                 style={{
                   marginLeft: "1rem",
-                  backgroundColor: "#fff",
-                  color: "#212329",
+                  backgroundColor: "transparent",
+                  color: "#00e472",
                   width: "200px",
                   outline: "none",
                   padding: ".8rem 1rem",
-                  border: "1px solid #212329",
+                  // border: "1px solid #212329",
+                  border: "1px solid #00e472",
                 }}
               >
-                Explore Campaigns
+                Login
               </Button>
             </Col>
           </Row>
