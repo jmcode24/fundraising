@@ -32,7 +32,7 @@ import about from '../images/about-io.png';
 
 export default function HomePage() {
   return (
-    <MainLayout pageTitle="Fund Fair Ghana &copy;">
+    <MainLayout pageTitle="Fund Fair Ghana">
       {/* Page details*/}
       <Container style={{marginTop: "120px"}}>
         <section id="home">

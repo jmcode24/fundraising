@@ -1,4 +1,3 @@
-import HomePage from "pages/HomePage";
 import LandingPage from "pages/LandingPage";
 import Login from "pages/Login";
 import Register from "pages/Register";
@@ -9,8 +8,7 @@ function Router() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
