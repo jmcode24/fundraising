@@ -1,57 +1,40 @@
-import React from 'react';
-import MainLayout from 'layouts/MainLayout/MainLayout';
+import React from "react";
+import MainLayout from "layouts/MainLayout/MainLayout";
 import { Container, Navbar, Nav, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
     <MainLayout pageTitle="Fund Fair Ghana | Sign up">
-      <Navbar variant="light" bg="#fff" collapseOnSelect expand="lg">
-        <Container>
-          <Navbar.Brand as={Link} to="/">
-            <h3 class="logo">FundFair</h3>
-            {/* <Image logo={logo} /> */}
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto nav-item">
-              <Nav.Link>
-                <p>
-                  Already have an account?
-                  <Button as={Link} to="/login"
-                    className='ms-1'
-                    variant='outline-dark'
-                    type="submit"
-                    style={{
-                      minWidth: "130px", 
-                    }}
-                    >
-                    Log in
-                  </Button>
-                </p>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      
-      <div className="mt-4"
+      <div
+        className="mt-4"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-       <div
+        <div
           style={{
             width: "400px",
           }}
         >
-          <p className='text-center mb-1' style={{fontSize: "2rem", fontFamily: "Poppins",fontWeight: "bold", color: "#00e472"}}>
-          Sign up
+          <p
+            className="text-center mb-1"
+            style={{
+              fontSize: "2rem",
+              fontFamily: "Poppins",
+              fontWeight: "bold",
+              color: "#00e472",
+            }}
+          >
+            Sign up
           </p>
-          <p className='text-center mb-4 text-muted' style={{fontSize: "1.5rem", fontFamily: "Poppins"}}>
-          it's quick and easy.
+          <p
+            className="text-center mb-4 text-muted"
+            style={{ fontSize: "1.5rem", fontFamily: "Poppins" }}
+          >
+            it's quick and easy.
           </p>
           <Form>
             <Form.Group className="mb-3" controlId="fullname">
