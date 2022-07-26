@@ -1,75 +1,18 @@
 import React from "react";
-import {
-  Button,
-  Col,
-  Container,
-  Nav,
-  Navbar,
-  Row,
-  Card,
-} from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Col, Container, Row, Image } from "react-bootstrap";
+import MainLayout from "layouts/MainLayout/MainLayout";
+import CampaignCard from "component/CampaignCard";
+
 import Help from "images/help.jpeg";
+import Coinbase from "images/coinbase.png";
+import Paypal from "images/paypal.png";
+import Vodafone from "images/vodafone.png";
+import Stripe from "images/stripelogo.png";
+import Airtel from "images/airtel.png";
 
 function LandingPage() {
   return (
-    <div>
-      <Navbar variant="light" bg="#fff" collapseOnSelect expand="lg">
-        <Container>
-          <Navbar.Brand>
-            <h3 class="logo">FundFair</h3>
-            {/* <Image logo={logo} /> */}
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto nav-item">
-              <Nav.Link>
-                <span className="text-dark" style={{ fontFamily: "poppins" }}>
-                  Explore
-                </span>
-              </Nav.Link>
-              <Nav.Link>
-                <span className="text-dark">How it works?</span>
-              </Nav.Link>
-              <Nav.Link>
-                <span className="text-dark">About</span>
-              </Nav.Link>
-            </Nav>
-            <Nav className="ms-auto nav-item">
-              <Link to="/login" style={{ color: "#444" }}>
-                <Nav.Link>
-                  <Button
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212329",
-                      minWidth: "130px",
-                      outline: "none",
-                      border: "1px solid #212329",
-                    }}
-                  >
-                    Log in
-                  </Button>
-                </Nav.Link>
-              </Link>
-
-              <Nav.Link>
-                <Button
-                  style={{
-                    backgroundColor: "#212529",
-                    color: "#fff",
-                    minWidth: "130px",
-                    outline: "none",
-                    border: "none",
-                  }}
-                >
-                  Sign up
-                </Button>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
+    <MainLayout>
       <Container fluid>
         <Container
           style={{
@@ -91,18 +34,20 @@ function LandingPage() {
                   fontSize: "3rem",
                   fontFamily: "Poppins",
                   fontWeight: "bold",
+                  color: "#004c46",
                 }}
               >
                 Connecting issues that matter with people who care
               </h1>
-              <p>
+              <p className="text-muted">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
                 omnis praesentium perferendis fugit ex provident deserunt
                 asperiores nisi, exercitationem accusantium?
               </p>
               <Button
                 style={{
-                  backgroundColor: "#212529",
+                  // backgroundColor: "#212529",
+                  backgroundColor: "#31bc2e",
                   color: "#fff",
                   width: "200px",
                   outline: "none",
@@ -120,22 +65,21 @@ function LandingPage() {
                   width: "200px",
                   outline: "none",
                   padding: ".8rem 1rem",
-                  border: "1px solid #212329",
+                  border: "2px solid #31bc2e",
                 }}
               >
                 Explore Campaigns
               </Button>
             </Col>
 
-            <Col
-              sm={12}
-              lg={5}
-              style={{
-                display: "flex",
-                justifyContent: "end",
-              }}
-            >
-              <img className="img-fluid" src={Help} alt="help img" />
+            <Col sm={12} lg={5}>
+              <Image
+                className="img-fluid"
+                fluid
+                src={Help}
+                alt="help img"
+                style={{ width: "100%" }}
+              />
             </Col>
           </Row>
         </Container>
@@ -143,12 +87,13 @@ function LandingPage() {
 
       {/* How it works */}
       <Container
+        id="how-it-works"
         fluid
         className=" text-white"
         style={{
           padding: "8rem 0",
           clipPath: "polygon(0 15%,100% 0,100% 100%,0 100%)",
-          background: "linear-gradient(180deg,#02090f,#02090f 43.75%)",
+          background: "linear-gradient(180deg,#004c46,#004c46 43.75%)",
         }}
       >
         <Container>
@@ -201,13 +146,13 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                1
+                01
               </div>
               <h1
                 style={{
                   fontSize: "1.5rem",
                   fontFamily: "Poppins",
-                  // color: "#fff",
+                  color: "#00e472",
                   fontWeight: "bold",
                 }}
               >
@@ -237,13 +182,13 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                2
+                02
               </div>
               <h1
                 style={{
                   fontSize: "1.5rem",
                   fontFamily: "Poppins",
-                  // color: "#fff",
+                  color: "#00e472",
                   fontWeight: "bold",
                 }}
               >
@@ -273,7 +218,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                3
+                03
               </div>
 
               <h1
@@ -281,6 +226,7 @@ function LandingPage() {
                   fontSize: "1.5rem",
                   fontFamily: "Poppins",
                   fontWeight: "bold",
+                  color: "#00e472",
                 }}
               >
                 Promote your Campaign
@@ -306,158 +252,18 @@ function LandingPage() {
           Trending Campaigns
         </h1>
         <Row className="py-2">
-          <Col>
-            <Card
-              style={{
-                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-                maxWidth: "345px",
-              }}
-            >
-              <Card.Img variant="top" src={Help} />
-              <Card.Body>
-                <Row>
-                  <Col
-                    lg="3"
-                    style={{
-                      background: "black",
-                      borderRadius: "5px",
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  ></Col>
-                  <Col lg="9">
-                    <p className="m-0">
-                      <span className="text-muted">$4,666</span>/$20,000
-                    </p>
-                    <p
-                      className="m-0"
-                      style={{
-                        background: "black",
-                        height: "7px",
-                        borderRadius: "50px",
-                      }}
-                    ></p>
-                  </Col>
-                </Row>
-                <Card.Text>
-                  Some quick example text to build on the card
-                </Card.Text>
-                <Button
-                  style={{
-                    backgroundColor: "#212529",
-                    color: "#fff",
-                    outline: "none",
-                    border: "none",
-                  }}
-                >
-                  Donate now
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card
-              style={{
-                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-                maxWidth: "345px",
-              }}
-            >
-              <Card.Img variant="top" src={Help} />
-              <Card.Body>
-                <Row>
-                  <Col
-                    lg="3"
-                    style={{
-                      background: "black",
-                      borderRadius: "5px",
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  ></Col>
-                  <Col lg="9">
-                    <p className="m-0">
-                      <span className="text-muted">$4,666</span>/$20,000
-                    </p>
-                    <p
-                      className="m-0"
-                      style={{
-                        background: "black",
-                        height: "7px",
-                        borderRadius: "50px",
-                      }}
-                    ></p>
-                  </Col>
-                </Row>
-                <Card.Text>
-                  Some quick example text to build on the card
-                </Card.Text>
-                <Button
-                  style={{
-                    backgroundColor: "#212529",
-                    color: "#fff",
-                    outline: "none",
-                    border: "none",
-                  }}
-                >
-                  Donate now
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card
-              style={{
-                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-                maxWidth: "345px",
-              }}
-            >
-              <Card.Img variant="top" src={Help} />
-              <Card.Body>
-                <Row>
-                  <Col
-                    lg="3"
-                    style={{
-                      background: "black",
-                      borderRadius: "5px",
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  ></Col>
-                  <Col lg="9">
-                    <p className="m-0">
-                      <span className="text-muted">$4,666</span>/$20,000
-                    </p>
-                    <p
-                      className="m-0"
-                      style={{
-                        background: "black",
-                        height: "7px",
-                        borderRadius: "50px",
-                      }}
-                    ></p>
-                  </Col>
-                </Row>
-                <Card.Text>
-                  Some quick example text to build on the card
-                </Card.Text>
-                <Button
-                  style={{
-                    backgroundColor: "#212529",
-                    color: "#fff",
-                    outline: "none",
-                    border: "none",
-                  }}
-                >
-                  Donate now
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
+          <CampaignCard />
+          <CampaignCard />
+          <CampaignCard />
         </Row>
       </Container>
 
       {/* Get Started Area */}
-      <Container fluid style={{ backgroundColor: "#02090f", color: "#fff" }}>
+      <Container
+        fluid
+        style={{ backgroundColor: "#004c46", color: "#fff" }}
+        id="about"
+      >
         <Container
           style={{
             minHeight: "60vh",
@@ -475,7 +281,7 @@ function LandingPage() {
             <Col sm={12} lg={7}>
               <h1
                 style={{
-                  fontSize: "4.5rem",
+                  fontSize: "3.5rem",
                   fontFamily: "Poppins",
                   color: "#fff",
                   fontWeight: "bold",
@@ -518,7 +324,67 @@ function LandingPage() {
           </Row>
         </Container>
       </Container>
-    </div>
+
+      {/* Trusted Area */}
+      <Container fluid className="py-5" style={{ background: "#f1f1f1" }}>
+        <Container>
+          <h1
+            style={{
+              fontSize: "3rem",
+              fontFamily: "Poppins",
+              color: "#004c46",
+              textAlign: "center",
+              fontWeight: "bold",
+            }}
+          >
+            Trusted Partners.
+          </h1>
+
+          <Row className="justify-content-center">
+            <Col
+              sm={12}
+              md={6}
+              lg={2}
+              style={{ justifyContent: "center", display: "flex" }}
+            >
+              <Image fluid style={{ width: "200px" }} src={Coinbase} />
+            </Col>
+            <Col
+              sm={12}
+              md={6}
+              lg={2}
+              style={{ justifyContent: "center", display: "flex" }}
+            >
+              <Image fluid style={{ width: "200px" }} src={Stripe} />
+            </Col>
+            <Col
+              sm={12}
+              md={6}
+              lg={2}
+              style={{ justifyContent: "center", display: "flex" }}
+            >
+              <Image fluid style={{ width: "200px" }} src={Vodafone} />
+            </Col>
+            <Col
+              sm={12}
+              md={6}
+              lg={2}
+              style={{ justifyContent: "center", display: "flex" }}
+            >
+              <Image fluid style={{ width: "200px" }} src={Airtel} />
+            </Col>
+            <Col
+              sm={12}
+              md={6}
+              lg={2}
+              style={{ justifyContent: "center", display: "flex" }}
+            >
+              <Image fluid style={{ width: "200px" }} src={Paypal} />
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+    </MainLayout>
   );
 }
 

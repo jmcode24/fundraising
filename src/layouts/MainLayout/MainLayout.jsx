@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import Header from "component/Header";
 import { Helmet } from "react-helmet";
 import Footer from "component/Footer";
@@ -13,9 +12,9 @@ function MainLayout(props) {
 
       <Header />
 
-      <Container>{props.children}</Container>
+      <>{props.children}</>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,5 +1,7 @@
 import HomePage from "pages/HomePage";
 import LandingPage from "pages/LandingPage";
+import Campaigns from "pages/Campaigns";
+import CampaignDetails from "pages/CampaignDetails";
 import Login from "pages/Login";
 import Register from "pages/Register";
 import React from "react";
@@ -9,11 +11,16 @@ function Router() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="campaigns" element={<Campaigns />}>
+          <Route path=":id" element={<CampaignDetails />} />
+          <Route index element={<Campaigns />} />
+        </Route>
+        {/* <Route path="campaign/:id" element={<CampaignDetails />} /> */}
 
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="invoices" element={<Invoices />} />
