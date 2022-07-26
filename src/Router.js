@@ -1,4 +1,3 @@
-import HomePage from "pages/HomePage";
 import LandingPage from "pages/LandingPage";
 import Campaigns from "pages/Campaigns";
 import CampaignDetails from "pages/CampaignDetails";
