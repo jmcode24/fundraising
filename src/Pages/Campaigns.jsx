@@ -5,7 +5,7 @@ import Help from "images/help.jpeg";
 
 const Campaigns = () => {
   return (
-    <MainLayout pageTitle="Campaigns">
+    <MainLayout pageTitle="FundFair Ghana | Campaigns">
       <Container className="py-5">
         <h1
           className="mb-3"

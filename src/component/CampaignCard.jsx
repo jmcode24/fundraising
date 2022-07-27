@@ -2,7 +2,6 @@ import React from "react";
 import * as classes from "./CampaignCard.module.css";
 import { Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { LinkContainer } from "react-router-bootstrap";
 import Help from "images/help.jpeg";
 
 function CampaignCard({ image, alt, children }) {
@@ -48,9 +47,9 @@ function CampaignCard({ image, alt, children }) {
             <Card.Text style={{ fontFamily: "Poppins" }}>
               Some quick example text to build on the card
             </Card.Text>
-            {/* <Button
+            <Button
               style={{
-                backgroundColor: "#00e472",
+                backgroundColor: "#31bc2e",
                 color: "#fff",
                 outline: "none",
                 fontSize: "14px",
@@ -58,7 +57,7 @@ function CampaignCard({ image, alt, children }) {
               }}
             >
               Donate now
-            </Button> */}
+            </Button>
           </Card.Body>
         </Card>
       </Link>

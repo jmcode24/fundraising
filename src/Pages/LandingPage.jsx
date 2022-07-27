@@ -12,7 +12,7 @@ import Airtel from "images/airtel.png";
 
 function LandingPage() {
   return (
-    <MainLayout>
+    <MainLayout pageTitle="FundFair Ghana">
       <Container fluid>
         <Container
           style={{
@@ -287,7 +287,7 @@ function LandingPage() {
                   fontWeight: "bold",
                 }}
               >
-                Get started with FundFair.
+                Get started with FundFair
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -337,7 +337,7 @@ function LandingPage() {
               fontWeight: "bold",
             }}
           >
-            Trusted Partners.
+            Trusted Partners
           </h1>
 
           <Row className="justify-content-center">

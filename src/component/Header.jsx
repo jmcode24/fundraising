@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -15,7 +15,7 @@ export default function Header() {
       }}
     >
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
           <h3 className="logo" style={{ color: "#004c46", fontWeight: "bold" }}>
             FundFair
           </h3>
@@ -27,9 +27,8 @@ export default function Header() {
             className="mx-auto nav-item"
             style={{ fonStyle: "normal", fontFamily: "poppins" }}
           >
-            <LinkContainer to="/campaigns">
-              <Nav.Link>Explore</Nav.Link>
-            </LinkContainer>
+            <Nav.Link as ={Link} to="/campaigns">Explore</Nav.Link>
+            
             {/* <LinkContainer to="/#how-it-works"> */}
             <Nav.Link href="/#how-it-works">How it works?</Nav.Link>
             {/* </LinkContainer> */}
@@ -38,7 +37,7 @@ export default function Header() {
             {/* </LinkContainer> */}
           </Nav>
           <Nav className="ms-auto nav-item">
-            <LinkContainer to="/login">
+            <Link to="/login">
               <Nav.Link>
                 <Button
                   style={{
@@ -52,9 +51,9 @@ export default function Header() {
                   Log in
                 </Button>
               </Nav.Link>
-            </LinkContainer>
+            </Link>
 
-            <LinkContainer to="/register">
+            <Link to="/register">
               <Nav.Link>
                 <Button
                   style={{
@@ -68,7 +67,7 @@ export default function Header() {
                   Sign up
                 </Button>
               </Nav.Link>
-            </LinkContainer>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
