@@ -1,6 +1,5 @@
-import Header from "component/Header";
 import React from "react";
-import { Col, Container, ListGroup, Nav, Row } from "react-bootstrap";
+import { Col, Container, Nav, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiBarChartFill } from "react-icons/ri";
@@ -14,8 +13,6 @@ function ProfileLayout(props) {
       <Helmet>
         <title>{props.pageTitle || "Profile"}</title>
       </Helmet>
-
-      {/* <Header /> */}
 
       <Container fluid>
         <Row>

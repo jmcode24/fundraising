@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Col, Row, Table } from "react-bootstrap";
-import CampaignCard from "component/CampaignCard";
 import Help from "images/help.jpeg";
 
 const ProfilePage = () => {
