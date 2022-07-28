@@ -7,7 +7,7 @@ function MainLayout(props) {
   return (
     <>
       <Helmet>
-        <title>{props.pageTitle || "Fund Fair Ghana"}</title>
+        <title>{props.pageTitle || "FundFair Ghana"}</title>
       </Helmet>
 
       <Header />

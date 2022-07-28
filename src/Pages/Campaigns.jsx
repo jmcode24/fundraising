@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import CampaignCard from "component/CampaignCard";
 
 const Campaigns = () => {

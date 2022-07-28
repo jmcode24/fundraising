@@ -287,7 +287,7 @@ function LandingPage() {
                   fontWeight: "bold",
                 }}
               >
-                Get started with FundFair.
+                Get started with FundFair
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum

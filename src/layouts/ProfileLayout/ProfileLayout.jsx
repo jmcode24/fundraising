@@ -1,10 +1,7 @@
 import React from "react";
-import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Col, Container, Nav, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import { AiOutlineHome } from "react-icons/ai";
-import { RiBarChartFill } from "react-icons/ri";
-import { FaRegCompass, FaSeedling } from "react-icons/fa";
-import { RiSendPlaneFill } from "react-icons/ri";
+import { FaSeedling } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import SideBar from "component/SideBar";
 

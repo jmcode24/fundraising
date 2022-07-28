@@ -1,7 +1,7 @@
 import React from "react";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Nav, NavItem } from "react-bootstrap";
 import { AiOutlineHome } from "react-icons/ai";
-import { FaRegCompass, FaSeedling } from "react-icons/fa";
+import { FaRegCompass } from "react-icons/fa";
 import { RiBarChartFill, RiSendPlaneFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
