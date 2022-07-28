@@ -113,7 +113,7 @@ function LandingPage() {
                   paddingTop: "3rem",
                 }}
               >
-                Fundraising on FundFair takes just a few clicks
+                Raising Funds on FundFair takes just a few clicks
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -156,7 +156,7 @@ function LandingPage() {
                   fontWeight: "bold",
                 }}
               >
-                Start with the basics
+                Create an account
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -192,7 +192,7 @@ function LandingPage() {
                   fontWeight: "bold",
                 }}
               >
-                Craft your story
+                Prep your Campaign
               </h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
@@ -247,6 +247,7 @@ function LandingPage() {
             fontSize: "2rem",
             fontFamily: "Poppins",
             fontWeight: "bold",
+            color: "#004c46",
           }}
         >
           Trending Campaigns
@@ -326,7 +327,7 @@ function LandingPage() {
       </Container>
 
       {/* Trusted Area */}
-      <Container fluid className="py-5" style={{ background: "#f1f1f1" }}>
+      <Container fluid className="py-5" style={{ background: "#fff" }}>
         <Container>
           <h1
             style={{
@@ -335,9 +336,10 @@ function LandingPage() {
               color: "#004c46",
               textAlign: "center",
               fontWeight: "bold",
+              marginBottom: "2rem",
             }}
           >
-            Trusted Partners.
+            Trusted Partners
           </h1>
 
           <Row className="justify-content-center">
@@ -380,6 +382,259 @@ function LandingPage() {
               style={{ justifyContent: "center", display: "flex" }}
             >
               <Image fluid style={{ width: "200px" }} src={Paypal} />
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+
+      {/* what can i campaign for */}
+      <Container
+        fluid
+        style={{ backgroundColor: "#004c46", color: "#fff" }}
+        id="about"
+      >
+        <Container
+          style={{
+            padding: "3rem 0",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "2.5rem",
+              fontFamily: "Poppins",
+              color: "#fff",
+              fontWeight: "bold",
+              textAlign: "center",
+            }}
+          >
+            What can i Campaign for?
+          </h1>
+          <Row
+            style={{
+              padding: "3rem 0",
+            }}
+          >
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Education
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Medical & Health
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Family
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Charity
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Business
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
+            </Col>
+            <Col sm={12} md={6} lg={4}>
+              <div
+                style={{
+                  background: "#00e472",
+                  borderRadius: "999px",
+                  color: "#fff",
+                  display: "block",
+                  fontFamily: "Poppins,sans-serif",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  height: "50px",
+                  lineHeight: "50px",
+                  margin: "auto",
+                  marginBottom: "20px",
+                  textAlign: "center",
+                  width: "50px",
+                }}
+              >
+                03
+              </div>
+
+              <h1
+                style={{
+                  textAlign: "center",
+                  fontSize: "1rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "bold",
+                  color: "#00e472",
+                }}
+              >
+                Disaster Relief
+              </h1>
+              <p className="text-center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                omnis praesentium perferendis fugit ex provident deserunt
+              </p>
             </Col>
           </Row>
         </Container>

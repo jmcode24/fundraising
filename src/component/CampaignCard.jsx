@@ -9,7 +9,7 @@ function CampaignCard({ image, alt, children }) {
   return (
     <Col sm={12} md={6} lg={4} className="my-2">
       <Link
-        to="/campaign/123"
+        to="/campaigns/123"
         style={{ textDecoration: "none" }}
         className="text-dark"
       >

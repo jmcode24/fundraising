@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
+import { FaSeedling } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -16,10 +18,18 @@ export default function Header() {
     >
       <Container>
         <Navbar.Brand>
-          <h3 className="logo" style={{ color: "#004c46", fontWeight: "bold" }}>
-            FundFair
-          </h3>
-          {/* <Image logo={logo} /> */}
+          <Link
+            to="/"
+            className="logo d-flex align-items-center"
+            style={{
+              color: "#004c46",
+              fontWeight: "bold",
+              textDecoration: "none",
+            }}
+          >
+            <FaSeedling style={{ fontSize: "2rem" }} />
+            <h4 className="m-0">FundFair</h4>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
