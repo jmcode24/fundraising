@@ -8,6 +8,13 @@ import Paypal from "images/paypal.png";
 import Vodafone from "images/vodafone.png";
 import Stripe from "images/stripelogo.png";
 import Airtel from "images/airtel.png";
+import { IoMdSchool } from "react-icons/io";
+import { FaHandsHelping, FaStethoscope } from "react-icons/fa";
+import {
+  MdBusinessCenter,
+  MdFamilyRestroom,
+  MdReportProblem,
+} from "react-icons/md";
 
 function LandingPage() {
   return (
@@ -431,7 +438,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <IoMdSchool />
               </div>
 
               <h1
@@ -468,7 +475,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <FaStethoscope />
               </div>
 
               <h1
@@ -505,7 +512,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <MdFamilyRestroom />
               </div>
 
               <h1
@@ -542,7 +549,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <FaHandsHelping />
               </div>
 
               <h1
@@ -579,7 +586,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <MdBusinessCenter />
               </div>
 
               <h1
@@ -616,7 +623,7 @@ function LandingPage() {
                   width: "50px",
                 }}
               >
-                03
+                <MdReportProblem />
               </div>
 
               <h1
