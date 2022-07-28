@@ -1,11 +1,12 @@
 import React from "react";
-import { Col, Container, Nav, Row } from "react-bootstrap";
+import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiBarChartFill } from "react-icons/ri";
 import { FaRegCompass, FaSeedling } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
+import SideBar from "component/SideBar";
 
 function ProfileLayout(props) {
   return (
@@ -41,95 +42,7 @@ function ProfileLayout(props) {
               <h4 className="m-0">FundFair</h4>
             </Nav.Link>
 
-            <Nav className="mt-1">
-              <Nav.Link
-                as={Link}
-                to="/profile"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  margin: 0,
-                  color: "#004c46",
-                  borderLeft: "5px solid #f7bc45",
-                  background: "rgba(247, 188, 69, 0.2)",
-                  // backgroundColor: "#f1f1f1",
-                  width: "100%",
-                }}
-                className="px-3 py-3"
-              >
-                <AiOutlineHome style={{ marginRight: "10px" }} />
-                <p
-                  className="p-0 m-0 ml-4"
-                  style={{ marginLeft: "20px !important" }}
-                >
-                  Dashboard
-                </p>
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="campaigns"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  margin: 0,
-                  color: "#444",
-                  width: "100%",
-                }}
-                className="px-3 py-3"
-              >
-                <FaRegCompass style={{ marginRight: "10px" }} />
-                <p
-                  className="p-0 m-0 ml-4"
-                  style={{ marginLeft: "20px !important" }}
-                >
-                  Campaigns
-                </p>
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="donations"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  margin: 0,
-                  color: "#444",
-                  width: "100%",
-                }}
-                className="px-3 py-3"
-              >
-                <RiSendPlaneFill style={{ marginRight: "10px" }} />
-                <p
-                  className="p-0 m-0 ml-4"
-                  style={{ marginLeft: "20px !important" }}
-                >
-                  Donations
-                </p>
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="analytics"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  margin: 0,
-                  color: "#444",
-                  width: "100%",
-                }}
-                className="px-3 py-3"
-              >
-                <RiBarChartFill style={{ marginRight: "10px" }} />
-                <p
-                  className="p-0 m-0 ml-4"
-                  style={{ marginLeft: "20px !important" }}
-                >
-                  Analytics
-                </p>
-              </Nav.Link>
-            </Nav>
+            <SideBar />
           </Col>
 
           {/* Main Content */}

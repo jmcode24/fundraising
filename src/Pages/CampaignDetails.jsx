@@ -1,21 +1,24 @@
 import { Col, Container, Row } from "react-bootstrap";
-import MainLayout from "layouts/MainLayout/MainLayout";
+import Help from "images/help.jpeg";
 
 const CampaignDetails = () => {
   return (
-    <MainLayout>
+    <>
       <Container>
-        <h1 style={{ color: "#004c46" }}>Campaign details</h1>
-        <Row>
+        <Row className="justify-content-between pt-4">
           <Col sm={12} md={4}>
-            <h1>filter campaigns</h1>
+            <h4>Donation info & status</h4>
           </Col>
-          <Col sm={12} md={8}>
-            <h1>campaigns content</h1>
+          <Col sm={12} md={7}>
+            <img
+              src={Help}
+              alt="banner"
+              style={{ height: "350px", width: "100%" }}
+            />
           </Col>
         </Row>
       </Container>
-    </MainLayout>
+    </>
   );
 };
 

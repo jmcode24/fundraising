@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "component/Header";
 import { Helmet } from "react-helmet";
+import { Outlet } from "react-router-dom";
 
 function MainLayout(props) {
   return (
@@ -11,7 +12,9 @@ function MainLayout(props) {
 
       <Header />
 
-      <>{props.children}</>
+      <>
+        <Outlet />
+      </>
 
       {/* <Footer /> */}
     </>

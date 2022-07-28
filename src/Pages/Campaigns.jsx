@@ -1,11 +1,9 @@
-import MainLayout from "layouts/MainLayout/MainLayout";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import CampaignCard from "component/CampaignCard";
-import Help from "images/help.jpeg";
 
 const Campaigns = () => {
   return (
-    <MainLayout pageTitle="Campaigns">
+    <div>
       <Container className="py-5">
         <h1
           className="mb-3"
@@ -26,7 +24,7 @@ const Campaigns = () => {
           <CampaignCard />
         </Row>
       </Container>
-    </MainLayout>
+    </div>
   );
 };
 

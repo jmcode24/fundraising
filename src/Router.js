@@ -10,20 +10,24 @@ import ProfilePage from "pages/ProfilePage";
 import DashboardCampaigns from "pages/DashboardCampaigns";
 import DashboardDonations from "pages/DashboardDonations";
 import DashboardAnalytics from "pages/DashboardAnalytics";
+import MainLayout from "layouts/MainLayout/MainLayout";
 
 function Router() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        {/* <Route index element={<LandingPage />} /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
 
-        <Route path="campaigns/:id" element={<CampaignDetails />} />
-        <Route path="campaigns" element={<Campaigns />} />
+        <Route path="campaigns" element={<MainLayout />}>
+          <Route index element={<Campaigns />} />
+          <Route path=":id" element={<CampaignDetails />} />
+        </Route>
 
-        <Route path="/profile" element={<ProfileLayout />}>
+        <Route path="profile" element={<ProfileLayout />}>
           <Route path="campaigns" element={<DashboardCampaigns />} />
           <Route path="donations" element={<DashboardDonations />} />
           <Route path="analytics" element={<DashboardAnalytics />} />

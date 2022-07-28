@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
-import MainLayout from "layouts/MainLayout/MainLayout";
 import CampaignCard from "component/CampaignCard";
 
 import Help from "images/help.jpeg";
@@ -12,7 +11,7 @@ import Airtel from "images/airtel.png";
 
 function LandingPage() {
   return (
-    <MainLayout>
+    <>
       <Container fluid>
         <Container
           style={{
@@ -639,7 +638,7 @@ function LandingPage() {
           </Row>
         </Container>
       </Container>
-    </MainLayout>
+    </>
   );
 }
 
