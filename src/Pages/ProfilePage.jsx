@@ -24,7 +24,7 @@ const ProfilePage = () => {
           </Button>
         </div>
       </div>
-      <Table>
+      <Table responsive>
         <thead>
           <tr>
             <th>#</th>

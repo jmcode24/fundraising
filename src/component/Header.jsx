@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaSeedling } from "react-icons/fa";
+import ProfileImage from "images/profile.jpg";
 
 export default function Header() {
+  const [user, setUser] = useState(true);
+  let location = useLocation();
+
   return (
     <Navbar
       variant="light"
@@ -13,6 +17,7 @@ export default function Header() {
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        background: location.pathname === "/" ? "#e0ffd6" : "#fff",
       }}
     >
       <Container>
@@ -34,51 +39,83 @@ export default function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
             className="mx-auto nav-item"
-            style={{ fonStyle: "normal", fontFamily: "poppins" }}
+            style={{
+              fonStyle: "normal",
+              fontFamily: "poppins",
+            }}
+            activeKey={location.pathname}
           >
-            <Nav.Link as={Link} to="/campaigns">
+            <Nav.Link as={Link} to="/campaigns" style={{ color: "#004c46" }}>
               Explore
             </Nav.Link>
 
-            {/* <LinkContainer to="/#how-it-works"> */}
-            <Nav.Link href="/#how-it-works">How it works?</Nav.Link>
-            {/* </LinkContainer> */}
-            {/* <LinkContainer to="/#about"> */}
-            <Nav.Link href="/#about">About</Nav.Link>
-            {/* </LinkContainer> */}
+            <Nav.Link
+              as={Link}
+              to="/#how-it-works"
+              style={{ color: "#004c46" }}
+            >
+              How it works?
+            </Nav.Link>
+            <Nav.Link as={Link} to="/#about" style={{ color: "#004c46" }}>
+              About
+            </Nav.Link>
           </Nav>
-          <Nav className="ms-auto nav-item">
-            <Link to="/login">
-              <Nav.Link>
-                <Button
-                  style={{
-                    backgroundColor: "#fff",
-                    color: "#212329",
-                    minWidth: "130px",
-                    outline: "none",
-                    border: "1px solid #31bc2e",
-                  }}
+          <Nav className="ms-auto nav-item" activeKey={location.pathname}>
+            {user ? (
+              <>
+                <Link
+                  to="/profile"
+                  className="d-flex align-items-center text-decoration-none"
                 >
-                  Log in
-                </Button>
-              </Nav.Link>
-            </Link>
+                  <div>
+                    <p className="m-0 text-dark">Jane Doe</p>
+                  </div>
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginLeft: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
+                </Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link as={Link} to="/login">
+                  <Button
+                    style={{
+                      backgroundColor: "transparent",
+                      color: "#004c46",
+                      minWidth: "130px",
+                      outline: "none",
+                      border: "1px solid #004c46",
+                    }}
+                  >
+                    Log in
+                  </Button>
+                </Nav.Link>
 
-            <Link to="/register">
-              <Nav.Link>
-                <Button
-                  style={{
-                    backgroundColor: "#000",
-                    color: "#fff",
-                    minWidth: "130px",
-                    outline: "none",
-                    border: "none",
-                  }}
-                >
-                  Sign up
-                </Button>
-              </Nav.Link>
-            </Link>
+                <Nav.Link as={Link} to="/register">
+                  <Button
+                    style={{
+                      backgroundColor: "#004c46",
+                      color: "#fff",
+                      minWidth: "130px",
+                      outline: "none",
+                      border: "none",
+                    }}
+                  >
+                    Sign up
+                  </Button>
+                </Nav.Link>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

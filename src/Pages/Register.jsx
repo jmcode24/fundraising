@@ -1,17 +1,17 @@
 import React from "react";
-import MainLayout from "layouts/MainLayout/MainLayout";
-import { Container, Navbar, Nav, Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <MainLayout pageTitle="Fund Fair Ghana | Sign up">
-      <div
-        className="mt-4"
+    <div pageTitle="Fund Fair Ghana | Sign up">
+      <Container
+        className="py-5"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          minHeight: "80vh",
         }}
       >
         <div
@@ -25,7 +25,7 @@ const Register = () => {
               fontSize: "2rem",
               fontFamily: "Poppins",
               fontWeight: "bold",
-              color: "#00e472",
+              color: "#004c46",
             }}
           >
             Sign up
@@ -60,7 +60,7 @@ const Register = () => {
             <Button
               type="submit"
               style={{
-                backgroundColor: "#212529",
+                backgroundColor: "#004c46",
                 color: "#fff",
                 width: "200px",
                 outline: "none",
@@ -72,8 +72,8 @@ const Register = () => {
             </Button>
           </Form>
         </div>
-      </div>
-    </MainLayout>
+      </Container>
+    </div>
   );
 };
 

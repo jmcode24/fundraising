@@ -1,17 +1,17 @@
 import React from "react";
-import MainLayout from "layouts/MainLayout/MainLayout";
-import { Container, Navbar, Nav, Button, Form } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <MainLayout pageTitle="Fund Fair Ghana | Log in">
-      <div
-        className="mt-4"
+    <div pageTitle="Fund Fair Ghana | Log in">
+      <Container
+        className="py-5"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          minHeight: "80vh",
         }}
       >
         <div
@@ -25,7 +25,7 @@ const Login = () => {
               fontSize: "2rem",
               fontFamily: "Poppins",
               fontWeight: "bold",
-              color: "#00e472",
+              color: "#004c46",
             }}
           >
             Sign in to continue
@@ -49,12 +49,12 @@ const Login = () => {
                 padding: ".5rem 1rem",
               }}
             >
-              Continue
+              Login
             </Button>
           </Form>
         </div>
-      </div>
-    </MainLayout>
+      </Container>
+    </div>
   );
 };
 

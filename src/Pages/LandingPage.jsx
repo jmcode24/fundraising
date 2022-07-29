@@ -15,11 +15,12 @@ import {
   MdFamilyRestroom,
   MdReportProblem,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
     <>
-      <Container fluid>
+      <Container fluid style={{ background: "#e0ffd6" }}>
         <Container
           style={{
             minHeight: "60vh",
@@ -52,8 +53,8 @@ function LandingPage() {
               </p>
               <Button
                 style={{
-                  // backgroundColor: "#212529",
-                  backgroundColor: "#31bc2e",
+                  backgroundColor: "#116149",
+                  // backgroundColor: "#31bc2e",
                   color: "#fff",
                   width: "200px",
                   outline: "none",
@@ -71,10 +72,16 @@ function LandingPage() {
                   width: "200px",
                   outline: "none",
                   padding: ".8rem 1rem",
-                  border: "2px solid #31bc2e",
+                  border: "2px solid #116149",
+                  // border: "2px solid #31bc2e",
                 }}
               >
-                Explore Campaigns
+                <Link
+                  to="/campaigns"
+                  style={{ textDecoration: "none", color: "#004c46" }}
+                >
+                  Explore Campaigns
+                </Link>
               </Button>
             </Col>
 
@@ -93,156 +100,165 @@ function LandingPage() {
 
       {/* How it works */}
       <Container
-        id="how-it-works"
         fluid
-        className=" text-white"
         style={{
-          padding: "8rem 0",
-          clipPath: "polygon(0 15%,100% 0,100% 100%,0 100%)",
-          background: "linear-gradient(180deg,#004c46,#004c46 43.75%)",
+          background: "#e0ffd6",
+          padding: 0,
+          margin: 0,
         }}
       >
-        <Container>
-          <Row
-            style={{
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "3rem 0",
-            }}
-          >
-            <Col sm={8} lg={7}>
-              <h1
-                style={{
-                  fontSize: "3rem",
-                  fontFamily: "Poppins",
-                  fontWeight: "bold",
-                  paddingTop: "3rem",
-                }}
-              >
-                Raising Funds on FundFair takes just a few clicks
-              </h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
-                omnis praesentium perferendis fugit ex provident deserunt
-              </p>
-            </Col>
-          </Row>
+        <Container
+          id="how-it-works"
+          fluid
+          className=" text-white"
+          style={{
+            padding: "8rem 0",
+            clipPath: "polygon(0 15%,100% 0,100% 100%,0 100%)",
+            background: "linear-gradient(180deg,#004c46,#004c46 43.75%)",
+          }}
+        >
+          <Container>
+            <Row
+              style={{
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "3rem 0",
+              }}
+            >
+              <Col sm={8} lg={7}>
+                <h1
+                  style={{
+                    fontSize: "3rem",
+                    fontFamily: "Poppins",
+                    fontWeight: "bold",
+                    paddingTop: "3rem",
+                  }}
+                >
+                  Raising Funds on FundFair takes just a few clicks
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                  omnis praesentium perferendis fugit ex provident deserunt
+                </p>
+              </Col>
+            </Row>
 
-          <Row
-            style={{
-              padding: "3rem 0",
-              textAlign: "center",
-            }}
-          >
-            <Col sm={12} md={4}>
-              <div
-                style={{
-                  background: "#00e472",
-                  borderRadius: "999px",
-                  color: "#fff",
-                  display: "block",
-                  fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  height: "50px",
-                  lineHeight: "50px",
-                  margin: "auto",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                  width: "50px",
-                }}
-              >
-                01
-              </div>
-              <h1
-                style={{
-                  fontSize: "1.5rem",
-                  fontFamily: "Poppins",
-                  color: "#00e472",
-                  fontWeight: "bold",
-                }}
-              >
-                Create an account
-              </h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
-                omnis praesentium perferendis fugit ex provident deserunt
-              </p>
-            </Col>
+            <Row
+              style={{
+                padding: "3rem 0",
+                textAlign: "center",
+              }}
+            >
+              <Col sm={12} md={4}>
+                <div
+                  style={{
+                    background: "#00e472",
+                    borderRadius: "999px",
+                    color: "#fff",
+                    display: "block",
+                    fontFamily: "Poppins,sans-serif",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    height: "50px",
+                    lineHeight: "50px",
+                    margin: "auto",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                    width: "50px",
+                  }}
+                >
+                  01
+                </div>
+                <h1
+                  style={{
+                    fontSize: "1.5rem",
+                    fontFamily: "Poppins",
+                    color: "#00e472",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Create an account
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                  omnis praesentium perferendis fugit ex provident deserunt
+                </p>
+              </Col>
 
-            <Col sm={12} md={4}>
-              <div
-                style={{
-                  background: "#00e472",
-                  borderRadius: "999px",
-                  color: "#fff",
-                  display: "block",
-                  fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  height: "50px",
-                  lineHeight: "50px",
-                  margin: "auto",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                  width: "50px",
-                }}
-              >
-                02
-              </div>
-              <h1
-                style={{
-                  fontSize: "1.5rem",
-                  fontFamily: "Poppins",
-                  color: "#00e472",
-                  fontWeight: "bold",
-                }}
-              >
-                Prep your Campaign
-              </h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
-                omnis praesentium perferendis fugit ex provident deserunt
-              </p>
-            </Col>
+              <Col sm={12} md={4}>
+                <div
+                  style={{
+                    background: "#00e472",
+                    borderRadius: "999px",
+                    color: "#fff",
+                    display: "block",
+                    fontFamily: "Poppins,sans-serif",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    height: "50px",
+                    lineHeight: "50px",
+                    margin: "auto",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                    width: "50px",
+                  }}
+                >
+                  02
+                </div>
+                <h1
+                  style={{
+                    fontSize: "1.5rem",
+                    fontFamily: "Poppins",
+                    color: "#00e472",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Prep your Campaign
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                  omnis praesentium perferendis fugit ex provident deserunt
+                </p>
+              </Col>
 
-            <Col sm={12} md={4}>
-              <div
-                style={{
-                  background: "#00e472",
-                  borderRadius: "999px",
-                  color: "#fff",
-                  display: "block",
-                  fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  height: "50px",
-                  lineHeight: "50px",
-                  margin: "auto",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                  width: "50px",
-                }}
-              >
-                03
-              </div>
+              <Col sm={12} md={4}>
+                <div
+                  style={{
+                    background: "#00e472",
+                    borderRadius: "999px",
+                    color: "#fff",
+                    display: "block",
+                    fontFamily: "Poppins,sans-serif",
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    height: "50px",
+                    lineHeight: "50px",
+                    margin: "auto",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                    width: "50px",
+                  }}
+                >
+                  03
+                </div>
 
-              <h1
-                style={{
-                  fontSize: "1.5rem",
-                  fontFamily: "Poppins",
-                  fontWeight: "bold",
-                  color: "#00e472",
-                }}
-              >
-                Promote your Campaign
-              </h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
-                omnis praesentium perferendis fugit ex provident deserunt
-              </p>
-            </Col>
-          </Row>
+                <h1
+                  style={{
+                    fontSize: "1.5rem",
+                    fontFamily: "Poppins",
+                    fontWeight: "bold",
+                    color: "#00e472",
+                  }}
+                >
+                  Promote your Campaign
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                  omnis praesentium perferendis fugit ex provident deserunt
+                </p>
+              </Col>
+            </Row>
+          </Container>
         </Container>
       </Container>
 
@@ -301,32 +317,36 @@ function LandingPage() {
                 omnis praesentium perferendis fugit ex provident deserunt
                 asperiores nisi, exercitationem accusantium?
               </p>
-              <Button
-                style={{
-                  backgroundColor: "#00e472",
-                  color: "#fff",
-                  width: "200px",
-                  outline: "none",
-                  padding: ".8rem 1rem",
-                  border: "none",
-                }}
-              >
-                Register
-              </Button>
-              <Button
-                style={{
-                  marginLeft: "1rem",
-                  backgroundColor: "transparent",
-                  color: "#00e472",
-                  width: "200px",
-                  outline: "none",
-                  padding: ".8rem 1rem",
-                  // border: "1px solid #212329",
-                  border: "1px solid #00e472",
-                }}
-              >
-                Login
-              </Button>
+              <Link to="/register" style={{ fontSize: "20px", color: "#fff" }}>
+                <Button
+                  style={{
+                    backgroundColor: "#00e472",
+                    color: "#fff",
+                    width: "200px",
+                    outline: "none",
+                    padding: ".8rem 1rem",
+                    border: "none",
+                  }}
+                >
+                  Register
+                </Button>
+              </Link>
+              <Link to="/login" style={{ fontSize: "20px", color: "#fff" }}>
+                <Button
+                  style={{
+                    marginLeft: "1rem",
+                    backgroundColor: "transparent",
+                    color: "#00e472",
+                    width: "200px",
+                    outline: "none",
+                    padding: ".8rem 1rem",
+                    // border: "1px solid #212329",
+                    border: "1px solid #00e472",
+                  }}
+                >
+                  Login
+                </Button>
+              </Link>
             </Col>
           </Row>
         </Container>
@@ -428,7 +448,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -437,6 +457,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <IoMdSchool />
               </div>
@@ -465,7 +486,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -474,6 +495,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <FaStethoscope />
               </div>
@@ -502,7 +524,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -511,6 +533,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <MdFamilyRestroom />
               </div>
@@ -539,7 +562,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -548,6 +571,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <FaHandsHelping />
               </div>
@@ -576,7 +600,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -585,6 +609,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <MdBusinessCenter />
               </div>
@@ -613,7 +638,7 @@ function LandingPage() {
                   color: "#fff",
                   display: "block",
                   fontFamily: "Poppins,sans-serif",
-                  fontSize: "18px",
+                  fontSize: "25px",
                   fontWeight: "bold",
                   height: "50px",
                   lineHeight: "50px",
@@ -622,6 +647,7 @@ function LandingPage() {
                   textAlign: "center",
                   width: "50px",
                 }}
+                className="d-flex justify-content-center align-items-center"
               >
                 <MdReportProblem />
               </div>
