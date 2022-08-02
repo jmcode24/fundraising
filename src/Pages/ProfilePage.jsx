@@ -85,7 +85,7 @@ const ProfilePage = () => {
             <img src={Help} alt="test" className="img-fluid" />
 
             <div className="p-2">
-              <h2>Food in Indonisia</h2>
+              <h4>Food in Indonisia</h4>
               <p className="text-muted">
                 History of your recent campaigns History of your recent
                 campaigns History of
@@ -94,7 +94,7 @@ const ProfilePage = () => {
                 style={{
                   maxWidth: "200px",
                   outline: "none",
-                  background: "#00e472",
+                  background: "#004c46",
                   border: "none",
                   display: "inline-block",
                 }}
@@ -117,7 +117,7 @@ const ProfilePage = () => {
             <img src={Help} alt="test" className="img-fluid" />
 
             <div className="p-2">
-              <h2>Food in Indonisia</h2>
+              <h4>Food in Indonisia</h4>
               <p className="text-muted">
                 History of your recent campaigns History of your recent
                 campaigns History of
@@ -126,7 +126,7 @@ const ProfilePage = () => {
                 style={{
                   maxWidth: "200px",
                   outline: "none",
-                  background: "#00e472",
+                  background: "#004c46",
                   border: "none",
                   display: "inline-block",
                 }}
@@ -149,7 +149,7 @@ const ProfilePage = () => {
             <img src={Help} alt="test" className="img-fluid" />
 
             <div className="p-2">
-              <h2>Food in Indonisia</h2>
+              <h4>Food in Indonisia</h4>
               <p className="text-muted">
                 History of your recent campaigns History of your recent
                 campaigns History of
@@ -158,7 +158,7 @@ const ProfilePage = () => {
                 style={{
                   maxWidth: "200px",
                   outline: "none",
-                  background: "#00e472",
+                  background: "#004c46",
                   border: "none",
                   display: "inline-block",
                 }}

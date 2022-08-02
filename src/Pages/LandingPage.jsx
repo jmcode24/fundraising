@@ -16,6 +16,7 @@ import {
   MdReportProblem,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function LandingPage() {
   return (
@@ -36,63 +37,77 @@ function LandingPage() {
             }}
           >
             <Col sm={12} lg={7}>
-              <h1
-                style={{
-                  fontSize: "3rem",
-                  fontFamily: "Poppins",
-                  fontWeight: "bold",
-                  color: "#004c46",
-                }}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: false }}
               >
-                Connecting issues that matter with people who care
-              </h1>
-              <p className="text-muted">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
-                omnis praesentium perferendis fugit ex provident deserunt
-                asperiores nisi, exercitationem accusantium?
-              </p>
-              <Button
-                style={{
-                  backgroundColor: "#116149",
-                  // backgroundColor: "#31bc2e",
-                  color: "#fff",
-                  width: "200px",
-                  outline: "none",
-                  padding: ".8rem 1rem",
-                  border: "none",
-                }}
-              >
-                Start a Campaign
-              </Button>
-              <Button
-                style={{
-                  marginLeft: "1rem",
-                  backgroundColor: "#fff",
-                  color: "#212329",
-                  width: "200px",
-                  outline: "none",
-                  padding: ".8rem 1rem",
-                  border: "2px solid #116149",
-                  // border: "2px solid #31bc2e",
-                }}
-              >
-                <Link
-                  to="/campaigns"
-                  style={{ textDecoration: "none", color: "#004c46" }}
+                <h1
+                  style={{
+                    fontSize: "3rem",
+                    fontFamily: "Poppins",
+                    fontWeight: "bold",
+                    color: "#004c46",
+                  }}
                 >
-                  Explore Campaigns
-                </Link>
-              </Button>
+                  Connecting issues that matter with people who care
+                </h1>
+                <p className="text-muted">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                  omnis praesentium perferendis fugit ex provident deserunt
+                  asperiores nisi, exercitationem accusantium?
+                </p>
+                <Button
+                  style={{
+                    backgroundColor: "#116149",
+                    // backgroundColor: "#31bc2e",
+                    color: "#fff",
+                    width: "200px",
+                    outline: "none",
+                    padding: ".8rem 1rem",
+                    border: "none",
+                  }}
+                >
+                  Start a Campaign
+                </Button>
+                <Button
+                  style={{
+                    marginLeft: "1rem",
+                    backgroundColor: "transparent",
+                    color: "#212329",
+                    width: "200px",
+                    outline: "none",
+                    padding: ".8rem 1rem",
+                    border: "2px solid #116149",
+                    // border: "2px solid #31bc2e",
+                  }}
+                >
+                  <Link
+                    to="/campaigns"
+                    style={{ textDecoration: "none", color: "#004c46" }}
+                  >
+                    Explore Campaigns
+                  </Link>
+                </Button>
+              </motion.div>
             </Col>
 
             <Col sm={12} lg={5}>
-              <Image
-                className="img-fluid"
-                fluid
-                src={Help}
-                alt="help img"
-                style={{ width: "100%" }}
-              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: false }}
+              >
+                <Image
+                  className="img-fluid"
+                  fluid
+                  src={Help}
+                  alt="help img"
+                  style={{ width: "100%" }}
+                />
+              </motion.div>
             </Col>
           </Row>
         </Container>
@@ -320,6 +335,7 @@ function LandingPage() {
               <Link to="/register" style={{ fontSize: "20px", color: "#fff" }}>
                 <Button
                   style={{
+                    // backgroundColor: "#366862",
                     backgroundColor: "#00e472",
                     color: "#fff",
                     width: "200px",

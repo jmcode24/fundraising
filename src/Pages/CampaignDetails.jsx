@@ -2,6 +2,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import Help from "images/help.jpeg";
 import ProfileImage from "images/profile.jpg";
 import { BsFillTagFill } from "react-icons/bs";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 const CampaignDetails = () => {
   return (
@@ -17,8 +18,214 @@ const CampaignDetails = () => {
                 "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)",
             }}
           >
-            <h4>Donation info & status</h4>
+            <Row className="mb-0 mt-2">
+              <Col className="mb-1">
+                <p className="m-0">
+                  Target:
+                  <span className="text-muted"> $50,000</span>
+                </p>
+              </Col>
+              <Col style={{ justifyContent: "end", display: "flex" }}>
+                <span className="text-muted">$42,000</span>
+                <p>(82%)</p>
+              </Col>
+            </Row>
+            <ProgressBar
+              completed={50}
+              maxCompleted={100}
+              height="7px"
+              isLabelVisible={false}
+              bgColor="#004c46"
+            />
+
+            <div className=" mt-3">
+              <Button
+                style={{
+                  backgroundColor: "#004c46",
+                  color: "#fff",
+                  width: "100%",
+                  outline: "none",
+                  padding: ".8rem 1rem",
+                  border: "none",
+                  margin: "10px 0",
+                }}
+                className="d-block"
+              >
+                Donate Now
+              </Button>
+              <Button
+                style={{
+                  backgroundColor: "#fff",
+                  color: "#004c46",
+                  width: "100%",
+                  outline: "none",
+                  padding: ".8rem 1rem",
+                  border: "1px solid #004c46",
+                  margin: "10px 0",
+                }}
+                className="d-block"
+              >
+                Flag Campaign as Fraud
+              </Button>
+            </div>
+
+            <div className="d-flex align-items-center justify-content-between  my-3 mt-4">
+              <h5 style={{ fontSize: "14px" }}>Last 5 donations</h5>
+              <h5 style={{ fontSize: "14px" }}>2k donations</h5>
+            </div>
+
+            <div
+              className="d-flex justify-content-between align-items-center my-3 "
+              style={{ fontSize: "12px" }}
+            >
+              <div className="d-flex align-items-center">
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
+                    fontSize: "14px",
+                    overflow: "hidden",
+                  }}
+                />
+
+                <div>
+                  <p className="m-0 p-0 text-dark">Jane Doe</p>
+                  <p className="m-0 p-0 text-muted">28 min ago</p>
+                </div>
+              </div>
+
+              <p>$40.00</p>
+            </div>
+            <div
+              className="d-flex justify-content-between align-items-center my-3 "
+              style={{ alignItems: "center", fontSize: "12px" }}
+            >
+              <div className="d-flex align-items-center">
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
+                    fontSize: "14px",
+                    overflow: "hidden",
+                  }}
+                />
+
+                <div>
+                  <p className="m-0 p-0 text-dark">Jane Doe</p>
+                  <p className="m-0 p-0 text-muted">28 min ago</p>
+                </div>
+              </div>
+
+              <p>$40.00</p>
+            </div>
+            <div
+              className="d-flex justify-content-between align-items-center my-3 "
+              style={{ alignItems: "center", fontSize: "12px" }}
+            >
+              <div className="d-flex align-items-center">
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
+                    fontSize: "14px",
+                    overflow: "hidden",
+                  }}
+                />
+
+                <div>
+                  <p className="m-0 p-0 text-dark">Jane Doe</p>
+                  <p className="m-0 p-0 text-muted">28 min ago</p>
+                </div>
+              </div>
+
+              <p>$40.00</p>
+            </div>
+            <div
+              className="d-flex justify-content-between align-items-center my-3 "
+              style={{ alignItems: "center", fontSize: "12px" }}
+            >
+              <div className="d-flex align-items-center">
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
+                    fontSize: "14px",
+                    overflow: "hidden",
+                  }}
+                />
+
+                <div>
+                  <p className="m-0 p-0 text-dark">Jane Doe</p>
+                  <p className="m-0 p-0 text-muted">28 min ago</p>
+                </div>
+              </div>
+
+              <p>$40.00</p>
+            </div>
+            <div
+              className="d-flex justify-content-between align-items-center my-3 "
+              style={{ alignItems: "center", fontSize: "12px" }}
+            >
+              <div className="d-flex align-items-center">
+                <img
+                  src={ProfileImage}
+                  alt="profile"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
+                    fontSize: "14px",
+                    overflow: "hidden",
+                  }}
+                />
+
+                <div>
+                  <p className="m-0 p-0 text-dark">Jane Doe</p>
+                  <p className="m-0 p-0 text-muted">28 min ago</p>
+                </div>
+              </div>
+
+              <p>$40.00</p>
+            </div>
+
+            <Button
+              style={{
+                backgroundColor: "#004c46",
+                color: "#fff",
+                width: "100%",
+                outline: "none",
+                padding: ".8rem 1rem",
+                border: "none",
+                margin: "10px 0",
+              }}
+              className="d-block mt-4"
+            >
+              Share
+            </Button>
           </Col>
+
           <Col sm={12} md={7}>
             <img
               src={Help}

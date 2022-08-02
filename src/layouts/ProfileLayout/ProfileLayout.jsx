@@ -22,6 +22,7 @@ function ProfileLayout(props) {
               borderRight: "2px solid #f1f1f1",
               height: "100vh",
               padding: 0,
+              // width: "100%",
               position: "fixed",
             }}
           >
@@ -109,17 +110,17 @@ function ProfileLayout(props) {
 
                   <div className="mt-4">
                     <p className="m-0">Total Campaigns</p>
-                    <h2>40</h2>
+                    <h4>40</h4>
                   </div>
 
                   <div className="mt-3">
                     <p className="m-0">Total Donations Received</p>
-                    <h2>$25,000</h2>
+                    <h4>$25,000</h4>
                   </div>
 
                   <div className="mt-3 ">
                     <p className="m-0">Total Donations Made</p>
-                    <h2>$490</h2>
+                    <h4>$490</h4>
                   </div>
 
                   <div className="mt-3 ">

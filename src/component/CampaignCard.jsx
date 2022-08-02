@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./CampaignCard.module.css";
 import { Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Help from "images/help.jpeg";
@@ -15,7 +14,6 @@ function CampaignCard({ image, alt, children }) {
       >
         <Card
           style={{
-            // boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
             maxWidth: "345px",
             border: "1px solid #f1f1f1",
             background: "#fff",
@@ -35,11 +33,10 @@ function CampaignCard({ image, alt, children }) {
                   maxCompleted={100}
                   height="7px"
                   isLabelVisible={false}
-                  // bgColor="#00e472"
                   bgColor="#004c46"
                 />
 
-                <Row className="mb-0">
+                <Row className="mb-0 mt-2">
                   <Col className="mb-1">
                     <p className="m-0">
                       Target:
@@ -56,7 +53,6 @@ function CampaignCard({ image, alt, children }) {
             <Button
               style={{
                 backgroundColor: "#004c46",
-                // backgroundColor: "#31bc2e",
                 color: "#fff",
                 outline: "none",
                 fontSize: "14px",
@@ -74,17 +70,3 @@ function CampaignCard({ image, alt, children }) {
 }
 
 export default CampaignCard;
-
-// <div className="card">
-//   {image && (
-//     <div className="card-image ">
-//       <figure>
-//         <img src={image} alt={alt} className="img-fluid" />
-//       </figure>
-//     </div>
-//   )}
-
-//   <div className="card-content">
-//     <div className="content">{children}</div>
-//   </div>
-// </div>
