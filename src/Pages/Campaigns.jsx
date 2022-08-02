@@ -22,6 +22,9 @@ const Campaigns = () => {
           <CampaignCard />
           <CampaignCard />
           <CampaignCard />
+          <CampaignCard />
+          <CampaignCard />
+          <CampaignCard />
         </Row>
       </Container>
     </div>

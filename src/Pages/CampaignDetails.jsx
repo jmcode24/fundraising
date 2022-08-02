@@ -1,10 +1,16 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import Help from "images/help.jpeg";
 import ProfileImage from "images/profile.jpg";
 import { BsFillTagFill } from "react-icons/bs";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { useState } from "react";
 
 const CampaignDetails = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Container>
@@ -50,6 +56,7 @@ const CampaignDetails = () => {
                   margin: "10px 0",
                 }}
                 className="d-block"
+                onClick={handleShow}
               >
                 Donate Now
               </Button>
@@ -64,6 +71,7 @@ const CampaignDetails = () => {
                   margin: "10px 0",
                 }}
                 className="d-block"
+                onClick={handleShow}
               >
                 Flag Campaign as Fraud
               </Button>
@@ -285,8 +293,9 @@ const CampaignDetails = () => {
                   padding: ".8rem 1rem",
                   border: "none",
                 }}
+                onClick={handleShow}
               >
-                Donate
+                Donate Now
               </Button>
               <Button
                 style={{
@@ -304,6 +313,67 @@ const CampaignDetails = () => {
             </div>
           </Col>
         </Row>
+
+        {/* Modal section */}
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>make donation</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="name@example.com"
+                  autoFocus
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Example textarea</Form.Label>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={handleClose}
+              style={{
+                backgroundColor: "#fff",
+                color: "#004c46",
+                width: "200px",
+                outline: "none",
+                padding: ".6rem .8rem",
+                border: "1px solid #004c46",
+                marginLeft: "10px",
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="primary"
+              onClick={handleClose}
+              style={{
+                color: "#fff",
+                backgroundColor: "#004c46",
+                width: "200px",
+                outline: "none",
+                padding: ".6rem .8rem",
+                border: "1px solid #004c46",
+                marginLeft: "10px",
+              }}
+            >
+              Donate
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </>
   );
