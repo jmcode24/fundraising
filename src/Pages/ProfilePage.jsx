@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, Col, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import Help from "images/help.jpeg";
+import { Link } from "react-router-dom";
 
 const ProfilePage = () => {
   return (
-    <div>
-      <div className="d-flex justify-content-between">
+    <Container>
+      <div className="d-flex flex-column flex-md-row justify-content-between">
         <div style={{ flex: 1 }}>
           <h4>Campaign</h4>
           <p>Let's create you first campaign</p>
@@ -20,7 +21,12 @@ const ProfilePage = () => {
               display: "inline-block",
             }}
           >
-            + creat campaign
+            <Link
+              to="campaigns/create"
+              className="text-white text-decoration-none"
+            >
+              + creat campaign
+            </Link>
           </Button>
         </div>
       </div>
@@ -169,7 +175,7 @@ const ProfilePage = () => {
           </Col>
         </Row>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -69,7 +69,12 @@ function LandingPage() {
                     border: "none",
                   }}
                 >
-                  Start a Campaign
+                  <Link
+                    to="/campaigns/create"
+                    className="text-white text-decoration-none"
+                  >
+                    Start a Campaign
+                  </Link>
                 </Button>
                 <Button
                   style={{

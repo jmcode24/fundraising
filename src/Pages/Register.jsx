@@ -30,12 +30,7 @@ const Register = () => {
           >
             Sign up
           </p>
-          <p
-            className="text-center mb-4 text-muted"
-            style={{ fontSize: "1.5rem", fontFamily: "Poppins" }}
-          >
-            it's quick and easy.
-          </p>
+
           <Form>
             <Form.Group className="mb-3" controlId="fullname">
               <Form.Label>Full Name</Form.Label>
@@ -57,6 +52,13 @@ const Register = () => {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
 
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>
+                <Link to="/login" className="text-muted text-decoration-none">
+                  already have an account login?
+                </Link>
+              </Form.Label>
+            </Form.Group>
             <Button
               type="submit"
               style={{

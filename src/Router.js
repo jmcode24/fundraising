@@ -11,6 +11,8 @@ import DashboardCampaigns from "pages/DashboardCampaigns";
 import DashboardDonations from "pages/DashboardDonations";
 import DashboardAnalytics from "pages/DashboardAnalytics";
 import MainLayout from "layouts/MainLayout/MainLayout";
+import CreateCampaign from "pages/CreateCampaign";
+import EditCampaign from "pages/EditCampaign";
 
 function Router() {
   return (
@@ -24,14 +26,18 @@ function Router() {
 
         <Route path="campaigns" element={<MainLayout />}>
           <Route index element={<Campaigns />} />
+          {/* <Route path="create" element={<CreateCampaign />} />
+          <Route path=":id/edit" element={<EditCampaign />} /> */}
           <Route path=":id" element={<CampaignDetails />} />
         </Route>
 
         <Route path="profile" element={<ProfileLayout />}>
-          <Route path="campaigns" element={<DashboardCampaigns />} />
-          <Route path="donations" element={<DashboardDonations />} />
-          <Route path="analytics" element={<DashboardAnalytics />} />
-          <Route index element={<ProfilePage />} />
+          <Route exact path="campaigns" element={<DashboardCampaigns />} />
+          <Route exact path="campaigns/create" element={<CreateCampaign />} />
+          <Route exact path="campaigns/:id/edit" element={<EditCampaign />} />
+          <Route exact path="donations" element={<DashboardDonations />} />
+          <Route exact path="analytics" element={<DashboardAnalytics />} />
+          <Route exact index element={<ProfilePage />} />
         </Route>
       </Routes>
     </div>

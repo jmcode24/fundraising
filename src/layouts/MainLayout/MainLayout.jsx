@@ -14,9 +14,9 @@ function MainLayout(props) {
 
       <Header />
 
-      <>
+      <div style={{ minHeight: "70vh" }}>
         <Outlet />
-      </>
+      </div>
 
       <Footer />
     </>

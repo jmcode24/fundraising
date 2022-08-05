@@ -52,6 +52,10 @@ body {
   box-shadow: none !important;
 }
 
+.categoryItem:hover {
+  color: white;
+  background-color: #004c46;
+}
 footer p {
   color: white;
 }
