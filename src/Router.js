@@ -26,8 +26,6 @@ function Router() {
 
         <Route path="campaigns" element={<MainLayout />}>
           <Route index element={<Campaigns />} />
-          {/* <Route path="create" element={<CreateCampaign />} />
-          <Route path=":id/edit" element={<EditCampaign />} /> */}
           <Route path=":id" element={<CampaignDetails />} />
         </Route>
 

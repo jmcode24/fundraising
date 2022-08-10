@@ -5,7 +5,7 @@ import Help from "images/help.jpeg";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { motion } from "framer-motion";
 
-function CampaignCard({ image, alt, children }) {
+function CampaignCard({ image, alt, children, url }) {
   return (
     <Col sm={12} md={6} lg={4} className="my-2">
       <motion.div

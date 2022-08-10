@@ -30,7 +30,14 @@ const EditCampaign = () => {
         // <div style={{ maxWidth: "600px", margin: "auto", padding: "2rem 0" }}>
         <div>
           <h4>Edit Campaign</h4>
-          <Form>
+          <Form
+          // className="d-flex"
+          // style={{
+          //   height: "300px",
+          //   width: "500px",
+          //   margin: "auto",
+          // }}
+          >
             <Form.Group className="mb-3">
               {imageUrl && (
                 <Image
@@ -56,6 +63,7 @@ const EditCampaign = () => {
                   textAlign: "center",
                   borderRadius: "3px",
                   cursor: "pointer",
+                  display: "block",
                 }}
               >
                 {imageUrl ? "change file" : "upload file"}
@@ -63,11 +71,11 @@ const EditCampaign = () => {
               <Form.Control id="image" type="file" hidden />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Title</Form.Label>
+              <Form.Label className="fw-bold">Title</Form.Label>
               <Form.Control type="text" placeholder="Feeding in Ukraine..." />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Category</Form.Label>
+              <Form.Label className="fw-bold">Category</Form.Label>
               <div
                 style={{
                   display: "flex",
@@ -98,11 +106,11 @@ const EditCampaign = () => {
               </div>
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Target</Form.Label>
+              <Form.Label className="fw-bold">Target</Form.Label>
               <Form.Control type="number" placeholder="$55,000" />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Description</Form.Label>
+              <Form.Label className="fw-bold">Description</Form.Label>
               <Form.Control as="textarea" rows={7} />
             </Form.Group>
             <Form.Group className="mb-3">
