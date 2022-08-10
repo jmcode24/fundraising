@@ -45,25 +45,38 @@ export default function Header() {
             }}
             activeKey={location.pathname}
           >
-            <Nav.Link as={Link} to="/campaigns" style={{ color: "#004c46" }}>
+            <Nav.Link
+              eventKey={1}
+              as={Link}
+              to="/campaigns"
+              style={{ color: "#004c46" }}
+            >
               Explore
             </Nav.Link>
 
             <Nav.Link
+              eventKey={2}
               as={Link}
               to="/#how-it-works"
               style={{ color: "#004c46" }}
             >
               How it works?
             </Nav.Link>
-            <Nav.Link as={Link} to="/#about" style={{ color: "#004c46" }}>
+            <Nav.Link
+              eventKey={3}
+              as={Link}
+              to="/#about"
+              style={{ color: "#004c46" }}
+            >
               About
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto nav-item" activeKey={location.pathname}>
             {user ? (
               <>
-                <Link
+                <Nav.Link
+                  as={Link}
+                  eventKey={4}
                   to="/profile"
                   className="d-flex align-items-center text-decoration-none"
                 >
@@ -83,11 +96,11 @@ export default function Header() {
                       overflow: "hidden",
                     }}
                   />
-                </Link>
+                </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link eventKey={5} as={Link} to="/login">
                   <Button
                     style={{
                       backgroundColor: "transparent",
@@ -101,7 +114,7 @@ export default function Header() {
                   </Button>
                 </Nav.Link>
 
-                <Nav.Link as={Link} to="/register">
+                <Nav.Link eventKey={6} as={Link} to="/register">
                   <Button
                     style={{
                       backgroundColor: "#004c46",

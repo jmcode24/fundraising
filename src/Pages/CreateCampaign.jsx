@@ -64,11 +64,11 @@ const CreateCampaign = () => {
               <Form.Control id="image" type="file" hidden />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Title</Form.Label>
+              <Form.Label className="fw-bold">Title</Form.Label>
               <Form.Control type="text" placeholder="Feeding in Ukraine..." />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Category</Form.Label>
+              <Form.Label className="fw-bold">Category</Form.Label>
               <div
                 style={{
                   display: "flex",
@@ -99,11 +99,11 @@ const CreateCampaign = () => {
               </div>
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Target</Form.Label>
+              <Form.Label className="fw-bold">Target</Form.Label>
               <Form.Control type="number" placeholder="$55,000" />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Description</Form.Label>
+              <Form.Label className="fw-bold">Description</Form.Label>
               <Form.Control as="textarea" rows={7} />
             </Form.Group>
             <Form.Group className="mb-3">
