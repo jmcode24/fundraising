@@ -1,14 +1,31 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Nav,
+  Navbar,
+  Row,
+  NavItem,
+} from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { FaSeedling } from "react-icons/fa";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import SideBar from "component/SideBar";
 import ProfileImage from "images/profile.jpg";
+import { logout, setUser } from "redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 function ProfileLayout(props) {
-  const [user, setUser] = useState(true);
+  const user = useSelector((state) => state.user);
+
   let location = useLocation();
+  const dispatch = useDispatch();
+
+  const handleLogout = async () => {
+    await logout();
+    dispatch(setUser(null));
+  };
 
   return (
     <div>
@@ -94,6 +111,11 @@ function ProfileLayout(props) {
               >
                 Settings
               </Nav.Link>
+              <NavItem className="w-100" onClick={handleLogout}>
+                <p className="p-0 m-0 " style={{ color: "#004c46" }}>
+                  Logout
+                </p>
+              </NavItem>
             </Nav>
             <Nav className="ms-auto nav-item" activeKey={location.pathname}>
               {user ? (
