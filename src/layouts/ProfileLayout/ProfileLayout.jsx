@@ -11,7 +11,7 @@ function ProfileLayout(props) {
   let location = useLocation();
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>{props.pageTitle || "Profile"}</title>
       </Helmet>
@@ -85,6 +85,14 @@ function ProfileLayout(props) {
                 style={{ color: "#004c46" }}
               >
                 Analytics
+              </Nav.Link>
+              <Nav.Link
+                eventKey={5}
+                as={Link}
+                to="settings"
+                style={{ color: "#004c46" }}
+              >
+                Settings
               </Nav.Link>
             </Nav>
             <Nav className="ms-auto nav-item" activeKey={location.pathname}>
@@ -214,7 +222,7 @@ function ProfileLayout(props) {
                 }}
                 className="d-none d-lg-block"
               >
-                <div style={{ padding: "20px 0" }}>
+                <div style={{ padding: "20px 15px" }}>
                   <p> Account</p>
                   <div className="d-flex align-items-center">
                     <div
@@ -354,7 +362,7 @@ function ProfileLayout(props) {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

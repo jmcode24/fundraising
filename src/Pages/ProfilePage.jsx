@@ -1,9 +1,12 @@
 import React from "react";
-import { Button, Col, Container, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table, Card } from "react-bootstrap";
 import Help from "images/help.jpeg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ProfilePage = () => {
+  const data = [1, 2, 3];
+
   return (
     <Container>
       <div className="d-flex flex-column flex-md-row justify-content-between">
@@ -77,102 +80,66 @@ const ProfilePage = () => {
         <p>History of your recent campaigns</p>
 
         <Row>
-          <Col
-            sm={12}
-            md={6}
-            lg={4}
-            style={{
-              border: "1px solid #f1f1f1",
-              padding: "0px",
-              margin: "10px",
-              maxWidth: "300px",
-            }}
-          >
-            <img src={Help} alt="test" className="img-fluid" />
-
-            <div className="p-2">
-              <h4>Food in Indonisia</h4>
-              <p className="text-muted">
-                History of your recent campaigns History of your recent
-                campaigns History of
-              </p>
-              <Button
-                style={{
-                  maxWidth: "200px",
-                  outline: "none",
-                  background: "#004c46",
-                  border: "none",
-                  display: "inline-block",
-                }}
+          {data.map((item, index) => (
+            <Col key={index} sm={12} md={6} lg={4} className="my-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: false }}
               >
-                Check it Now
-              </Button>
-            </div>
-          </Col>
-          <Col
-            sm={12}
-            md={6}
-            lg={4}
-            style={{
-              border: "1px solid #f1f1f1",
-              padding: "0px",
-              margin: "10px",
-              maxWidth: "300px",
-            }}
-          >
-            <img src={Help} alt="test" className="img-fluid" />
-
-            <div className="p-2">
-              <h4>Food in Indonisia</h4>
-              <p className="text-muted">
-                History of your recent campaigns History of your recent
-                campaigns History of
-              </p>
-              <Button
-                style={{
-                  maxWidth: "200px",
-                  outline: "none",
-                  background: "#004c46",
-                  border: "none",
-                  display: "inline-block",
-                }}
-              >
-                Check it Now
-              </Button>
-            </div>
-          </Col>
-          <Col
-            sm={12}
-            md={6}
-            lg={4}
-            style={{
-              border: "1px solid #f1f1f1",
-              padding: "0px",
-              margin: "10px",
-              maxWidth: "300px",
-            }}
-          >
-            <img src={Help} alt="test" className="img-fluid" />
-
-            <div className="p-2">
-              <h4>Food in Indonisia</h4>
-              <p className="text-muted">
-                History of your recent campaigns History of your recent
-                campaigns History of
-              </p>
-              <Button
-                style={{
-                  maxWidth: "200px",
-                  outline: "none",
-                  background: "#004c46",
-                  border: "none",
-                  display: "inline-block",
-                }}
-              >
-                Check it Now
-              </Button>
-            </div>
-          </Col>
+                <Card
+                  style={{
+                    maxWidth: "345px",
+                    border: "1px solid #f1f1f1",
+                    background: "#fff",
+                  }}
+                >
+                  <Card.Img variant="top" src={Help} />
+                  <Card.Body>
+                    <Row>
+                      <Col lg="12" className="mb-2">
+                        <h4>Feeding in Russia</h4>
+                        <Card.Text style={{ fontFamily: "Poppins" }}>
+                          Some quick example text to build on the card
+                        </Card.Text>
+                      </Col>
+                    </Row>
+                    <Button
+                      as={Link}
+                      to="/campaigns/123"
+                      style={{
+                        backgroundColor: "#004c46",
+                        color: "#fff",
+                        outline: "none",
+                        fontSize: "14px",
+                        border: "none",
+                        width: "100%",
+                      }}
+                      className="text-white mt-2"
+                    >
+                      view
+                    </Button>
+                    <Button
+                      as={Link}
+                      to="/profile/campaigns/123/edit"
+                      style={{
+                        backgroundColor: "#004c46",
+                        color: "#fff",
+                        outline: "none",
+                        fontSize: "14px",
+                        border: "none",
+                        width: "100%",
+                      }}
+                      className="text-white mt-2"
+                    >
+                      edit
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </div>
     </Container>

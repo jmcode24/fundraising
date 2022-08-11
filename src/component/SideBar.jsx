@@ -59,7 +59,7 @@ const SideBar = () => {
       </NavItem>
       <NavItem className="w-100">
         <NavLink
-          to="analytics"
+          to="settings"
           className={({ isActive }) => (isActive ? "active-link " : "link ")}
         >
           <MdSettings style={{ marginRight: "10px" }} />

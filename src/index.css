@@ -7,6 +7,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html,
+body {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;

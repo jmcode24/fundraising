@@ -10,6 +10,7 @@ import ProfilePage from "pages/ProfilePage";
 import DashboardCampaigns from "pages/DashboardCampaigns";
 import DashboardDonations from "pages/DashboardDonations";
 import DashboardAnalytics from "pages/DashboardAnalytics";
+import DashboardSettings from "pages/DashboardSettings";
 import MainLayout from "layouts/MainLayout/MainLayout";
 import CreateCampaign from "pages/CreateCampaign";
 import EditCampaign from "pages/EditCampaign";
@@ -43,6 +44,7 @@ function Router() {
           <Route exact path="campaigns/:id/edit" element={<EditCampaign />} />
           <Route exact path="donations" element={<DashboardDonations />} />
           <Route exact path="analytics" element={<DashboardAnalytics />} />
+          <Route exact path="settings" element={<DashboardSettings />} />
           <Route exact index element={<ProfilePage />} />
         </Route>
       </Routes>
