@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "actions/action";
+import { registerUser } from "redux/actions";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -120,11 +120,14 @@ const Register = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword">
               <Form.Label>
-                <Link to="/login" className="text-muted text-decoration-none">
-                  already have an account login?
-                </Link>
+                <p className="text-muted">
+                  already have an account?
+                  <Link to="/login" className="text-primary text-decoration-none fw-bold ms-1">
+                    Login
+                  </Link>
+                </p>
               </Form.Label>
             </Form.Group>
             <Button

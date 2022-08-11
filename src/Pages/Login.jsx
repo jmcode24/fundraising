@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "actions/action";
+import { login } from "redux/actions";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -96,14 +96,17 @@ const Login = () => {
                 value={password} onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword">
               <Form.Label>
-                <Link
-                  to="/register"
-                  className="text-muted text-decoration-none"
-                >
-                  don't have an account register?
-                </Link>
+                <p className="text-muted">
+                  don't have an account? 
+                  <Link
+                    to="/register"
+                    className="text-danger text-decoration-none fw-bold ms-1"
+                  >
+                    Register
+                  </Link>
+                </p>
               </Form.Label>
             </Form.Group>
 

@@ -2,7 +2,7 @@ import { legacy_createStore as createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import thunk from 'redux-thunk';
 import storage from 'redux-persist/lib/storage';
-import { authReducer } from 'reducers/reducer';
+import { authReducer } from './reducers';
 
 const persistConfig = {
   key: "root",
