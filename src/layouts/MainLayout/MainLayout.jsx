@@ -5,7 +5,6 @@ import { Outlet } from "react-router-dom";
 import Footer from "component/Footer";
 
 function MainLayout(props) {
-  console.log(props);
   return (
     <>
       <Helmet>

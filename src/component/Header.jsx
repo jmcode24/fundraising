@@ -6,11 +6,10 @@ import ProfileImage from "images/profile.jpg";
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  // const [user, setUser] = useState(true);
   let location = useLocation();
 
   const user = useSelector((state) => state.user);
-  console.log("data", user);
+
   return (
     <Navbar
       variant="light"

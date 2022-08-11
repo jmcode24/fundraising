@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button, Container, Alert, Spinner } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "redux/actions";
+import { Link, useNavigate, Navigate } from "react-router-dom";
+import { registerUser, setUser } from "redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -13,7 +14,10 @@ const Register = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
+  const user = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const startLoading = () => {
     setLoading(true);
     setTimeout(() => {
@@ -35,20 +39,21 @@ const Register = () => {
 
         const userInfo = {
           fullName: fullName,
-          phone: phone
+          phone: phone,
         };
 
-      await registerUser(email, password, userInfo);
-      // navigate("profile", { replace: true });
+        const userData = await registerUser(email, password, userInfo);
+        dispatch(setUser(userData));
+        navigate("/profile", { replace: true });
       }
     } catch (error) {
-      if (error.code === 'auth/email-already-in-use') {
+      if (error.code === "auth/email-already-in-use") {
         setLoading(false);
         setEmailError(true);
         setTimeout(() => {
           setEmailError(false);
         }, 2000);
-      } else if (error.code === 'auth/weak-password') {
+      } else if (error.code === "auth/weak-password") {
         setLoading(false);
         setPasswordError(true);
         setTimeout(() => {
@@ -56,12 +61,14 @@ const Register = () => {
         }, 2000);
       }
 
-      console.log(error)
+      console.log(error);
     }
   };
 
-  return (
-    <div pageTitle="Fund Fair Ghana | Sign up">
+  return user ? (
+    <Navigate to="/profile" replace={true} />
+  ) : (
+    <div>
       <Container
         className="py-5"
         style={{
@@ -89,34 +96,58 @@ const Register = () => {
           </p>
 
           <Form>
-            {emptyfields && <Alert variant='danger' className='text-center mt-1 mb-3'>Leave no input field empty</Alert>}
-            {emailError && <Alert variant='danger' className='text-center mt-1 mb-3'>Email already in use</Alert> }
-            {passwordError && <Alert variant='danger' className='text-center mt-1 mb-3'>Password should be at least 6 characters</Alert> }
+            {emptyfields && (
+              <Alert variant="danger" className="text-center mt-1 mb-3">
+                Leave no input field empty
+              </Alert>
+            )}
+            {emailError && (
+              <Alert variant="danger" className="text-center mt-1 mb-3">
+                Email already in use
+              </Alert>
+            )}
+            {passwordError && (
+              <Alert variant="danger" className="text-center mt-1 mb-3">
+                Password should be at least 6 characters
+              </Alert>
+            )}
             <Form.Group className="mb-3" controlId="fullname">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter full name" 
-                value={fullName}  onChange={(e) => setFullName(e.target.value)}
+              <Form.Control
+                type="text"
+                placeholder="Enter full name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="phone">
               <Form.Label>Phone</Form.Label>
-              <Form.Control type="text" placeholder="Enter phone" 
-                value={phone} onChange={(e) => setPhone(e.target.value)}
+              <Form.Control
+                type="text"
+                placeholder="Enter phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="email">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" 
-                value={email} onChange={(e) => setEmail(e.target.value)} 
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" 
-                value={password} onChange={(e) => setPassword(e.target.value)}
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
 
@@ -124,14 +155,19 @@ const Register = () => {
               <Form.Label>
                 <p className="text-muted">
                   already have an account?
-                  <Link to="/login" className="text-primary text-decoration-none border px-1 border-primary fw-bold ms-1">
+                  <Link
+                    to="/login"
+                    className="text-primary text-decoration-none border px-1 border-primary fw-bold ms-1"
+                  >
                     Log in
                   </Link>
                 </p>
               </Form.Label>
             </Form.Group>
             <Button
-              type="submit" disabled={loading} onClick={handleSignUp}
+              type="submit"
+              disabled={loading}
+              onClick={handleSignUp}
               style={{
                 backgroundColor: "#004c46",
                 color: "#fff",
@@ -143,10 +179,19 @@ const Register = () => {
             >
               {loading ? (
                 <i>
-                  <Spinner as="span" animation="grow" variant="light" size="sm" role="status" aria-hidden="true"/> Signing up
-                </i>) : 
-                ("Submit")
-              }
+                  <Spinner
+                    as="span"
+                    animation="grow"
+                    variant="light"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />{" "}
+                  Signing up
+                </i>
+              ) : (
+                "Submit"
+              )}
             </Button>
           </Form>
         </div>

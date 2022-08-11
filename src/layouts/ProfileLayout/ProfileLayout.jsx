@@ -5,7 +5,6 @@ import { FaSeedling } from "react-icons/fa";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import SideBar from "component/SideBar";
 import ProfileImage from "images/profile.jpg";
-import Header from "component/Header";
 
 function ProfileLayout(props) {
   const [user, setUser] = useState(true);
@@ -53,7 +52,6 @@ function ProfileLayout(props) {
                 fonStyle: "normal",
                 fontFamily: "poppins",
               }}
-              // activeKey={location.pathname}
             >
               <Nav.Link
                 eventKey={1}
@@ -161,7 +159,6 @@ function ProfileLayout(props) {
               borderRight: "2px solid #f1f1f1",
               height: "100vh",
               padding: 0,
-              // width: "100%",
               position: "fixed",
             }}
             className="d-none d-lg-block"
@@ -186,13 +183,7 @@ function ProfileLayout(props) {
           </Col>
 
           {/* Main Content */}
-          <Col
-            sm={12}
-            lg={10}
-            // lg="auto"
-            className="p-0 ms-lg-auto"
-            // style={{ marginLeft: "auto" }}
-          >
+          <Col sm={12} lg={10} className="p-0 ms-lg-auto">
             <Row>
               <Col sm={12} lg={9}>
                 <div
@@ -221,7 +212,6 @@ function ProfileLayout(props) {
                   background: "#fff",
                   minHeight: "100vh",
                 }}
-                // className="p-3 bg-light"
                 className="d-none d-lg-block"
               >
                 <div style={{ padding: "20px 0" }}>

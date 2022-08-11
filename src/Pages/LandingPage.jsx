@@ -36,7 +36,7 @@ function LandingPage() {
               padding: "3rem 0",
             }}
           >
-            <Col sm={12} lg={7}>
+            <Col sm={12} lg={7} className="py-3">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -85,7 +85,6 @@ function LandingPage() {
                     outline: "none",
                     padding: ".8rem 1rem",
                     border: "2px solid #116149",
-                    // border: "2px solid #31bc2e",
                   }}
                 >
                   <Link

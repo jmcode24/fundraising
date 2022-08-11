@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Alert, Spinner } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { login } from "redux/actions";
+import { Link, useNavigate, Navigate } from "react-router-dom";
+import { login, setUser } from "redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +13,9 @@ const Login = () => {
   const [wrongPassword, setWrongPassword] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
   const startLoading = () => {
     setLoading(true);
     setTimeout(() => {
@@ -31,8 +35,10 @@ const Login = () => {
       } else {
         startLoading();
 
-        await login(email, password);
-        // navigate("profile", { replace: true });
+        const userData = await login(email, password);
+
+        dispatch(setUser(userData));
+        navigate("/profile", { replace: true });
       }
     } catch (error) {
       if (error.code === "auth/user-not-found") {
@@ -53,7 +59,9 @@ const Login = () => {
     }
   };
 
-  return (
+  return user ? (
+    <Navigate to="/profile" replace={true} />
+  ) : (
     <div>
       <Container
         className="py-5"

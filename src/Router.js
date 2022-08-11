@@ -13,6 +13,7 @@ import DashboardAnalytics from "pages/DashboardAnalytics";
 import MainLayout from "layouts/MainLayout/MainLayout";
 import CreateCampaign from "pages/CreateCampaign";
 import EditCampaign from "pages/EditCampaign";
+import ProtectedRoute from "component/ProtectedRoute";
 
 function Router() {
   return (
@@ -29,7 +30,14 @@ function Router() {
           <Route path=":id" element={<CampaignDetails />} />
         </Route>
 
-        <Route path="profile" element={<ProfileLayout />}>
+        <Route
+          path="profile"
+          element={
+            <ProtectedRoute>
+              <ProfileLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route exact path="campaigns" element={<DashboardCampaigns />} />
           <Route exact path="campaigns/create" element={<CreateCampaign />} />
           <Route exact path="campaigns/:id/edit" element={<EditCampaign />} />

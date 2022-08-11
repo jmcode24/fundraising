@@ -1,13 +1,17 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from 'firebase/auth';
-import { doc, setDoc} from 'firebase/firestore';
-import { auth, firestore, storage } from '../firebase/config';
-import { ref, uploadBytes } from 'firebase/storage';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { auth, firestore, storage } from "../firebase/config";
+import { ref, uploadBytes } from "firebase/storage";
 
 export const setAuthenticated = (authenticated) => {
   return {
     type: "SET_AUTHENTICATED",
     payload: authenticated,
-  }
+  };
 };
 
 export const setUser = (user) => {
@@ -20,47 +24,48 @@ export const setUser = (user) => {
 export const registerUser = async (email, password, userInfo) => {
   try {
     const userCredentials = await createUserWithEmailAndPassword(
-      auth, email, password
+      auth,
+      email,
+      password
     );
 
     const uid = userCredentials.user.uid;
     await userDetails(userInfo, uid);
-  } 
-  catch (error) {
-    throw error
+
+    return userCredentials.user;
+  } catch (error) {
+    throw error;
   }
 };
 
 export const login = async (email, password) => {
   try {
     const userCredentials = await signInWithEmailAndPassword(
-      auth, email, password
+      auth,
+      email,
+      password
     );
-    console.log(userCredentials)
-    
+
     const user = userCredentials.user;
+
+    return user;
+  } catch (error) {
+    throw error;
   }
-  catch(error) {
-    throw error
-  };
 };
 
 export const logout = async () => {
   try {
-    await signOut(auth)
-
-    console.log(signOut(auth));
-
-  } catch(error) {
-    console.log(error)
-  };
+    await signOut(auth);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const userDetails = async (userInfo, uid) => {
   try {
     await setDoc(doc(firestore, "users", uid), userInfo);
-
-  } catch(error) {
-    console.log(error)
-  };
+  } catch (error) {
+    console.log(error);
+  }
 };
