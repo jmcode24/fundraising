@@ -3,11 +3,14 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { FaSeedling } from "react-icons/fa";
 import ProfileImage from "images/profile.jpg";
+import { useSelector } from "react-redux";
 
 export default function Header() {
-  const [user, setUser] = useState(true);
+  // const [user, setUser] = useState(true);
   let location = useLocation();
 
+  const user = useSelector((state) => state.user);
+  // console.log("data", stateData);
   return (
     <Navbar
       variant="light"
