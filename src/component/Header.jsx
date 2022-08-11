@@ -10,7 +10,7 @@ export default function Header() {
   let location = useLocation();
 
   const user = useSelector((state) => state.user);
-  // console.log("data", stateData);
+  console.log("data", user);
   return (
     <Navbar
       variant="light"
