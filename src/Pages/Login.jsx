@@ -78,7 +78,7 @@ const Login = () => {
               color: "#004c46",
             }}
           >
-            Sign in to continue
+            Log in to continue
           </p>
           <Form>
             {emptyfields && <Alert variant='danger' className='text-center mt-1 mb-3'>Enter email and password</Alert> }
@@ -124,7 +124,7 @@ const Login = () => {
               >
               {loading ? (
                 <i>
-                  <Spinner as="span" animation="grow" variant="light" size="sm" role="status" aria-hidden="true"/> Signing in
+                  <Spinner as="span" animation="grow" variant="light" size="sm" role="status" aria-hidden="true"/> Logging in
                 </i>) : 
                 ("Submit")
               }
