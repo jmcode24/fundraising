@@ -102,9 +102,9 @@ const Login = () => {
                   don't have an account? 
                   <Link
                     to="/register"
-                    className="text-danger text-decoration-none fw-bold ms-1"
+                    className="text-danger text-decoration-none border px-1 border-danger fw-bold ms-1"
                   >
-                    Register
+                    Sign up
                   </Link>
                 </p>
               </Form.Label>

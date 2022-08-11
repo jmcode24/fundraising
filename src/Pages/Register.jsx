@@ -124,8 +124,8 @@ const Register = () => {
               <Form.Label>
                 <p className="text-muted">
                   already have an account?
-                  <Link to="/login" className="text-primary text-decoration-none fw-bold ms-1">
-                    Login
+                  <Link to="/login" className="text-primary text-decoration-none border px-1 border-primary fw-bold ms-1">
+                    Log in
                   </Link>
                 </p>
               </Form.Label>
