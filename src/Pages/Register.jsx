@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button, Container, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { registerUser, setUser } from "redux/actions";
@@ -157,7 +157,8 @@ const Register = () => {
                   already have an account?
                   <Link
                     to="/login"
-                    className="text-primary text-decoration-none border px-1 border-primary fw-bold ms-1"
+                    className="text-decoration-underline px-1 ms-1"
+                    style={{ color: "#004c46" }}
                   >
                     Log in
                   </Link>

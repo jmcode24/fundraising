@@ -1,10 +1,10 @@
 import React from "react";
-import { Button, Row, Col, Form } from "react-bootstrap";
+import { Button, Row, Col, Form, Container } from "react-bootstrap";
 import ProfileImage from "images/profile.jpg";
 
 const DashboardSettings = () => {
   return (
-    <div>
+    <Container>
       <div className="p-2">
         <Row
           className="mb-3 py-4 align-items-center"
@@ -57,7 +57,7 @@ const DashboardSettings = () => {
               </div>
             </div>
           </Col>
-          <Col md={8}>
+          <Col md={9}>
             <form>
               <Row>
                 <Col xs={12} sm={6}>
@@ -268,7 +268,7 @@ const DashboardSettings = () => {
           Save
         </Button>
       </div>
-    </div>
+    </Container>
   );
 };
 

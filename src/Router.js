@@ -15,6 +15,7 @@ import MainLayout from "layouts/MainLayout/MainLayout";
 import CreateCampaign from "pages/CreateCampaign";
 import EditCampaign from "pages/EditCampaign";
 import ProtectedRoute from "component/ProtectedRoute";
+import ViewCampaign from "pages/ViewCampaign";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function Router() {
         >
           <Route exact path="campaigns" element={<DashboardCampaigns />} />
           <Route exact path="campaigns/create" element={<CreateCampaign />} />
+          <Route exact path="campaigns/:id" element={<ViewCampaign />} />
           <Route exact path="campaigns/:id/edit" element={<EditCampaign />} />
           <Route exact path="donations" element={<DashboardDonations />} />
           <Route exact path="analytics" element={<DashboardAnalytics />} />

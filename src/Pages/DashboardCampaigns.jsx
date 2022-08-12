@@ -28,7 +28,7 @@ const DashboardCampaign = () => {
                 <Card.Body>
                   <Row>
                     <Col lg="12" className="mb-2">
-                      <h4>Feeding in Russia</h4>
+                      <h5 className="fw-bold">Feeding in Russia</h5>
                       <Card.Text style={{ fontFamily: "Poppins" }}>
                         Some quick example text to build on the card
                       </Card.Text>
@@ -36,7 +36,7 @@ const DashboardCampaign = () => {
                   </Row>
                   <Button
                     as={Link}
-                    to="/campaigns/123"
+                    to="123"
                     style={{
                       backgroundColor: "#004c46",
                       color: "#fff",

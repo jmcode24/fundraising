@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Button,
   Col,
@@ -189,7 +189,8 @@ function ProfileLayout(props) {
               borderRight: "2px solid #f1f1f1",
               height: "100vh",
               padding: 0,
-              position: "fixed",
+              position: "sticky",
+              top: 0,
             }}
             className="d-none d-lg-block"
           >
@@ -213,174 +214,173 @@ function ProfileLayout(props) {
           </Col>
 
           {/* Main Content */}
-          <Col sm={12} lg={10} className="p-0 ms-lg-auto">
-            <Row>
-              <Col sm={12} lg={9}>
+          <Col sm={12} lg={7} className="p-0">
+            <div
+              style={{
+                color: "#004c46",
+                fontWeight: "bold",
+                textDecoration: "none",
+                borderBottom: "2px solid #f1f1f1",
+                height: "60px",
+              }}
+              className="p-3 m-0 d-flex align-items-center"
+            >
+              <p className="m-0">Search</p>
+            </div>
+
+            <div className="p-3">
+              <Outlet />
+            </div>
+          </Col>
+
+          <Col
+            sm={12}
+            md={3}
+            style={{
+              borderLeft: "2px solid #f1f1f1",
+              background: "#fff",
+              minHeight: "100vh",
+              position: "fixed",
+              top: 0,
+              right: 0,
+            }}
+            className="d-none d-lg-block "
+          >
+            <div style={{ padding: "20px 0px" }}>
+              <p> Account</p>
+              <div className="d-flex align-items-center">
                 <div
                   style={{
-                    color: "#004c46",
-                    fontWeight: "bold",
-                    textDecoration: "none",
-                    borderBottom: "2px solid #f1f1f1",
+                    width: "60px",
                     height: "60px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    marginRight: "10px",
                   }}
-                  className="p-3 m-0 d-flex align-items-center"
                 >
-                  <p className="m-0">Search</p>
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginRight: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
+                </div>
+                <div>
+                  <p className="m-0 text-dark">Jane Doe</p>
+                  <p className="m-0 text-muted">jane@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <p className="m-0">Total Campaigns</p>
+                <h4>40</h4>
+              </div>
+
+              <div className="mt-3">
+                <p className="m-0">Total Donations Received</p>
+                <h4>$25,000</h4>
+              </div>
+
+              <div className="mt-3 ">
+                <p className="m-0">Total Donations Made</p>
+                <h4>$490</h4>
+              </div>
+
+              <div className="mt-3 ">
+                <p className="m-0">History Donations</p>
+
+                <div className="mt-3 d-flex align-items-center">
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginRight: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
+
+                  <div>
+                    <p className="m-0 text-dark">Jane Doe</p>
+                    <p className="m-0 text-muted">jane@gmail.com</p>
+                  </div>
                 </div>
 
-                <div className="p-3">
-                  <Outlet />
-                </div>
-              </Col>
+                <div className="mt-3 d-flex align-items-center">
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginRight: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
 
-              <Col
-                sm={12}
-                lg={3}
-                style={{
-                  borderLeft: "2px solid #f1f1f1",
-                  background: "#fff",
-                  minHeight: "100vh",
-                }}
-                className="d-none d-lg-block"
-              >
-                <div style={{ padding: "20px 15px" }}>
-                  <p> Account</p>
-                  <div className="d-flex align-items-center">
-                    <div
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        borderRadius: "50%",
-                        background: "#f1f1f1",
-                        marginRight: "10px",
-                      }}
-                    >
-                      <img
-                        src={ProfileImage}
-                        alt="profile"
-                        style={{
-                          width: "60px",
-                          height: "60px",
-                          borderRadius: "50%",
-                          background: "#f1f1f1",
-                          marginRight: "10px",
-                          fontSize: "14px",
-                          overflow: "hidden",
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <p className="m-0 text-dark">Jane Doe</p>
-                      <p className="m-0 text-muted">jane@gmail.com</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-4">
-                    <p className="m-0">Total Campaigns</p>
-                    <h4>40</h4>
-                  </div>
-
-                  <div className="mt-3">
-                    <p className="m-0">Total Donations Received</p>
-                    <h4>$25,000</h4>
-                  </div>
-
-                  <div className="mt-3 ">
-                    <p className="m-0">Total Donations Made</p>
-                    <h4>$490</h4>
-                  </div>
-
-                  <div className="mt-3 ">
-                    <p className="m-0">History Donations</p>
-
-                    <div className="mt-3 d-flex align-items-center">
-                      <img
-                        src={ProfileImage}
-                        alt="profile"
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          borderRadius: "50%",
-                          background: "#f1f1f1",
-                          marginRight: "10px",
-                          fontSize: "14px",
-                          overflow: "hidden",
-                        }}
-                      />
-
-                      <div>
-                        <p className="m-0 text-dark">Jane Doe</p>
-                        <p className="m-0 text-muted">jane@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-3 d-flex align-items-center">
-                      <img
-                        src={ProfileImage}
-                        alt="profile"
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          borderRadius: "50%",
-                          background: "#f1f1f1",
-                          marginRight: "10px",
-                          fontSize: "14px",
-                          overflow: "hidden",
-                        }}
-                      />
-
-                      <div>
-                        <p className="m-0 text-dark">Jane Doe</p>
-                        <p className="m-0 text-muted">jane@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-3 d-flex align-items-center">
-                      <img
-                        src={ProfileImage}
-                        alt="profile"
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          borderRadius: "50%",
-                          background: "#f1f1f1",
-                          marginRight: "10px",
-                          fontSize: "14px",
-                          overflow: "hidden",
-                        }}
-                      />
-
-                      <div>
-                        <p className="m-0 text-dark">Jane Doe</p>
-                        <p className="m-0 text-muted">jane@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <div className="mt-3 d-flex align-items-center">
-                      <img
-                        src={ProfileImage}
-                        alt="profile"
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                          borderRadius: "50%",
-                          background: "#f1f1f1",
-                          marginRight: "10px",
-                          fontSize: "14px",
-                          overflow: "hidden",
-                        }}
-                      />
-
-                      <div>
-                        <p className="m-0 text-dark">Jane Doe</p>
-                        <p className="m-0 text-muted">jane@gmail.com</p>
-                      </div>
-                    </div>
+                  <div>
+                    <p className="m-0 text-dark">Jane Doe</p>
+                    <p className="m-0 text-muted">jane@gmail.com</p>
                   </div>
                 </div>
-              </Col>
-            </Row>
+
+                <div className="mt-3 d-flex align-items-center">
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginRight: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
+
+                  <div>
+                    <p className="m-0 text-dark">Jane Doe</p>
+                    <p className="m-0 text-muted">jane@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="mt-3 d-flex align-items-center">
+                  <img
+                    src={ProfileImage}
+                    alt="profile"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      marginRight: "10px",
+                      fontSize: "14px",
+                      overflow: "hidden",
+                    }}
+                  />
+
+                  <div>
+                    <p className="m-0 text-dark">Jane Doe</p>
+                    <p className="m-0 text-muted">jane@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>

@@ -8,7 +8,7 @@ const ProfilePage = () => {
   const data = [1, 2, 3];
 
   return (
-    <Container>
+    <div>
       <div className="d-flex flex-column flex-md-row justify-content-between">
         <div style={{ flex: 1 }}>
           <h4>Campaign</h4>
@@ -99,7 +99,7 @@ const ProfilePage = () => {
                   <Card.Body>
                     <Row>
                       <Col lg="12" className="mb-2">
-                        <h4>Feeding in Russia</h4>
+                        <h5 className="fw-bold">Feeding in Russia</h5>
                         <Card.Text style={{ fontFamily: "Poppins" }}>
                           Some quick example text to build on the card
                         </Card.Text>
@@ -107,7 +107,7 @@ const ProfilePage = () => {
                     </Row>
                     <Button
                       as={Link}
-                      to="/campaigns/123"
+                      to="/profile/campaigns/123"
                       style={{
                         backgroundColor: "#004c46",
                         color: "#fff",
@@ -142,7 +142,7 @@ const ProfilePage = () => {
           ))}
         </Row>
       </div>
-    </Container>
+    </div>
   );
 };
 
