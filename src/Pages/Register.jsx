@@ -22,7 +22,7 @@ const Register = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 15000);
   };
 
   const handleSignUp = async (e) => {

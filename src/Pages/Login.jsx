@@ -20,7 +20,7 @@ const Login = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 15000);
   };
 
   const handleSignIn = async (e) => {
