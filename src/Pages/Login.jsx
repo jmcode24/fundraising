@@ -86,7 +86,7 @@ const Login = () => {
               color: "#004c46",
             }}
           >
-            Log in to continue
+            Log in
           </p>
           <Form>
             {emptyfields && (
@@ -128,7 +128,8 @@ const Login = () => {
                   don't have an account?
                   <Link
                     to="/register"
-                    className="text-danger text-decoration-none border px-1 border-danger fw-bold ms-1"
+                    className="text-decoration-underline px-1 ms-1"
+                    style={{ color: "#004c46" }}
                   >
                     Sign up
                   </Link>
