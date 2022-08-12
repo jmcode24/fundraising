@@ -42,7 +42,7 @@ export const data = {
     {
       label: "Dataset 1",
       data: [1900, 200, 3500, 444, 578, 1000, 700],
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      backgroundColor: "#004c46",
     },
   ],
 };
