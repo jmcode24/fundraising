@@ -348,7 +348,7 @@ function LandingPage() {
                     border: "none",
                   }}
                 >
-                  Register
+                  Sign up
                 </Button>
               </Link>
               <Link to="/login" style={{ fontSize: "20px", color: "#fff" }}>
@@ -364,7 +364,7 @@ function LandingPage() {
                     border: "1px solid #00e472",
                   }}
                 >
-                  Login
+                  Log in
                 </Button>
               </Link>
             </Col>

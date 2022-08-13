@@ -8,7 +8,7 @@ function MainLayout(props) {
   return (
     <>
       <Helmet>
-        <title>{props.pageTitle || "FundFair Ghana"}</title>
+        <title>{props.pageTitle || "FundFair"}</title>
       </Helmet>
 
       <Header />

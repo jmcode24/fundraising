@@ -62,7 +62,7 @@ export default function Footer() {
                 </Nav.Link>
               </Col>
               <Col sm={12} md={4}>
-                <p className="fw-bold text-white mb-4">Leagal</p>
+                <p className="fw-bold text-white mb-4">Legal</p>
                 <Nav.Link as={Link} to="/" className="p-0 mb-3 text-white">
                   Terms of Service
                 </Nav.Link>
