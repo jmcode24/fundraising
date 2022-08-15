@@ -205,10 +205,10 @@ const DashboardSettings = () => {
           </Col>
           <Col xs={12} sm={6}>
             <p marginBottom={"5px"} fontSize={"14px"}>
-              State/City
+              State/Region
             </p>
             <input
-              placeholder="State/City"
+              placeholder="State/Region"
               // value="State/City"
               style={{
                 border: "1.5px solid #ccc",

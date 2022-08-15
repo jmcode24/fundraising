@@ -28,7 +28,7 @@ const ProfilePage = () => {
               to="campaigns/create"
               className="text-white text-decoration-none"
             >
-              + creat campaign
+              + create campaign
             </Link>
           </Button>
         </div>
