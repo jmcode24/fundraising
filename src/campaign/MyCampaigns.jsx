@@ -5,8 +5,6 @@ import WithdrawIcon from "images/withdraw.png";
 import EditIcon from "images/edit.png";
 import { motion } from "framer-motion";
 import ProgressBar from "@ramonak/react-progress-bar";
-import { MdOutlinePublishedWithChanges } from "react-icons/md";
-import { GiReceiveMoney } from "react-icons/gi";
 import { useSelector } from "react-redux";
 
 const MyCampaigns = () => {
