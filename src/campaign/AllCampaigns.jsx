@@ -1,4 +1,4 @@
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Form, Pagination, Row } from "react-bootstrap";
 import CampaignCard from "component/CampaignCard";
 
 const AllCampaigns = () => {
@@ -39,6 +39,17 @@ const AllCampaigns = () => {
           <CampaignCard />
           <CampaignCard />
         </Row>
+        <Pagination>
+          <Pagination.First />
+          <Pagination.Item>{1}</Pagination.Item>
+
+          <Pagination.Item>{10}</Pagination.Item>
+          <Pagination.Item active>{12}</Pagination.Item>
+          <Pagination.Item disabled>{14}</Pagination.Item>
+
+          <Pagination.Item>{20}</Pagination.Item>
+          <Pagination.Last />
+        </Pagination>
       </Container>
     </div>
   );

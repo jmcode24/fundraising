@@ -36,7 +36,7 @@ const Create = () => {
         <Navigate to="/login" replace={true} />
       ) : (
         // <div style={{ maxWidth: "600px", margin: "auto", padding: "2rem 0" }}>
-        <div>
+        <Container>
           <h4>Create Campaign</h4>
           <Form>
             <Form.Group className="mb-3">
@@ -130,7 +130,7 @@ const Create = () => {
               </Button>
             </Form.Group>
           </Form>
-        </div>
+        </Container>
       )}
     </Container>
   );

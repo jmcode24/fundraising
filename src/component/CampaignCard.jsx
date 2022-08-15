@@ -30,7 +30,7 @@ function CampaignCard({ image, alt, children, url }) {
             <Card.Body>
               <Row>
                 <Col lg="12" className="mb-2">
-                  <h4>Feeding in Russia</h4>
+                  <h4>Kidney Transplant</h4>
                   <Card.Text style={{ fontFamily: "Poppins" }}>
                     Some quick example text to build on the card
                   </Card.Text>

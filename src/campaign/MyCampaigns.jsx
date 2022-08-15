@@ -1,4 +1,4 @@
-import { Button, Row, Col, Card, Container } from "react-bootstrap";
+import { Button, Row, Col, Card, Container, Pagination } from "react-bootstrap";
 import { Link, Navigate } from "react-router-dom";
 import Help from "images/help.jpeg";
 import WithdrawIcon from "images/withdraw.png";
@@ -18,7 +18,7 @@ const MyCampaigns = () => {
       {!user ? (
         <Navigate to="/login" replace={true} />
       ) : (
-        <>
+        <Container>
           <h4 style={{ color: "#004c46" }}>My Campaigns </h4>
           <Row className="py-2">
             {data.map((item, index) => (
@@ -51,7 +51,7 @@ const MyCampaigns = () => {
                             style={{ textDecoration: "none" }}
                             className="text-dark"
                           >
-                            <h4>Feeding in Russia</h4>
+                            <h4>Kidney Transplant</h4>
                           </Link>
                           <Card.Text style={{ fontFamily: "Poppins" }}>
                             Some quick example text to build on the card
@@ -101,67 +101,20 @@ const MyCampaigns = () => {
                   </Card>
                 </motion.div>
               </Col>
-              // <Col key={index} sm={12} md={6} lg={4} className="my-2">
-              //   <motion.div
-              //     initial={{ opacity: 0 }}
-              //     whileInView={{ opacity: 1 }}
-              //     transition={{ delay: 0.2 }}
-              //     viewport={{ once: false }}
-              //   >
-              //     <Card
-              //       style={{
-              //         maxWidth: "345px",
-              //         border: "1px solid #f1f1f1",
-              //         background: "#fff",
-              //       }}
-              //     >
-              //       <Card.Img variant="top" src={Help} />
-              //       <Card.Body>
-              //         <Row>
-              //           <Col lg="12" className="mb-2">
-              //             <h5 className="fw-bold">Feeding in Russia</h5>
-              //             <Card.Text style={{ fontFamily: "Poppins" }}>
-              //               Some quick example text to build on the card
-              //             </Card.Text>
-              //           </Col>
-              //         </Row>
-              //         <Button
-              //           as={Link}
-              //           to="123"
-              //           style={{
-              //             backgroundColor: "#004c46",
-              //             color: "#fff",
-              //             outline: "none",
-              //             fontSize: "14px",
-              //             border: "none",
-              //             width: "100%",
-              //           }}
-              //           className="text-white mt-2"
-              //         >
-              //           view
-              //         </Button>
-              //         <Button
-              //           as={Link}
-              //           to="123/edit"
-              //           style={{
-              //             backgroundColor: "#004c46",
-              //             color: "#fff",
-              //             outline: "none",
-              //             fontSize: "14px",
-              //             border: "none",
-              //             width: "100%",
-              //           }}
-              //           className="text-white mt-2"
-              //         >
-              //           edit
-              //         </Button>
-              //       </Card.Body>
-              //     </Card>
-              //   </motion.div>
-              // </Col>
             ))}
           </Row>
-        </>
+          <Pagination>
+            <Pagination.First />
+            <Pagination.Item>{1}</Pagination.Item>
+
+            <Pagination.Item>{10}</Pagination.Item>
+            <Pagination.Item active>{12}</Pagination.Item>
+            <Pagination.Item disabled>{14}</Pagination.Item>
+
+            <Pagination.Item>{20}</Pagination.Item>
+            <Pagination.Last />
+          </Pagination>
+        </Container>
       )}
     </Container>
   );

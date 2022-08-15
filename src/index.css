@@ -57,3 +57,13 @@ body {
   color: white;
   background-color: #004c46;
 }
+
+.pagination .page-link,
+.pagination .page-link:hover {
+  color: #004c46;
+}
+.pagination .page-item.active .page-link {
+  background: #004c46;
+  outline: none;
+  border-color: #004c46;
+}
