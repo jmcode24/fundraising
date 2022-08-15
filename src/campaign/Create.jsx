@@ -2,21 +2,30 @@ import React, { useState } from "react";
 import { Button, Container, Form, Image } from "react-bootstrap";
 import Help from "images/help.jpeg";
 import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Create = () => {
   const categories = [
-    "Education",
-    "Business",
-    "Health & Medical",
-    "Family",
-    "Disaster",
-    "Charity",
-    "Funeral",
+    "Cancer",
+    "Child Labour",
+    "Diabetes",
+    "High blood pressure",
+    "High cholesterol",
+    "Obesity",
+    "Osteoporosis",
+    "Stroke",
+    "Diarrhea",
+    "Asthma attack",
+    "Burn",
+    "Bronchitis",
+    "Broken bone",
+    "Respiratory infection",
     "Others",
   ];
   const [category, setCategory] = useState("");
   const [imageUrl, setImageUrl] = useState(null);
-  const [user, setUser] = useState(true);
+  // const [user, setUser] = useState(true);
+  const user = useSelector((state) => state.user);
 
   const selectCategory = (category) => {
     setCategory(category);

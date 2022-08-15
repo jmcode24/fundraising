@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import { FaSeedling } from "react-icons/fa";
+import { FaSeedling, FaSignOutAlt } from "react-icons/fa";
 import ProfileImage from "images/profile.jpg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, setUser } from "redux/actions";
 
 export default function Header() {
   let location = useLocation();
 
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  const handleLogout = async () => {
+    await logout();
+    dispatch(setUser(null));
+  };
 
   return (
     <Navbar
@@ -76,6 +83,19 @@ export default function Header() {
           <Nav className="ms-auto nav-item" activeKey={location.pathname}>
             {user ? (
               <>
+                <Nav.Link
+                  as={Link}
+                  onClick={handleLogout}
+                  eventKey={4}
+                  to="/#logout"
+                  className="d-flex align-items-center text-decoration-none"
+                >
+                  <div style={{ marginRight: "10px" }}>
+                    <p className="m-0 text-dark">Logout</p>
+                  </div>
+                  <FaSignOutAlt />
+                </Nav.Link>
+
                 <Nav.Link
                   as={Link}
                   eventKey={4}
