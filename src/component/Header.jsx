@@ -46,40 +46,42 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav
-            className="mx-auto nav-item"
-            style={{
-              fonStyle: "normal",
-              fontFamily: "poppins",
-            }}
-            activeKey={location.pathname}
-          >
-            <Nav.Link
-              eventKey={1}
-              as={Link}
-              to="/campaigns"
-              style={{ color: "#004c46" }}
+          {user && (
+            <Nav
+              className="mx-auto nav-item"
+              style={{
+                fonStyle: "normal",
+                fontFamily: "poppins",
+              }}
+              activeKey={location.pathname}
             >
-              Home
-            </Nav.Link>
+              <Nav.Link
+                eventKey={1}
+                as={Link}
+                to="/campaigns"
+                style={{ color: "#004c46" }}
+              >
+                Home
+              </Nav.Link>
 
-            <Nav.Link
-              eventKey={2}
-              as={Link}
-              to="/my-campaigns"
-              style={{ color: "#004c46" }}
-            >
-              My Campaigns
-            </Nav.Link>
-            <Nav.Link
-              eventKey={3}
-              as={Link}
-              to="/campaigns/create"
-              style={{ color: "#004c46" }}
-            >
-              Create Campaign
-            </Nav.Link>
-          </Nav>
+              <Nav.Link
+                eventKey={2}
+                as={Link}
+                to="/my-campaigns"
+                style={{ color: "#004c46" }}
+              >
+                My Campaigns
+              </Nav.Link>
+              <Nav.Link
+                eventKey={3}
+                as={Link}
+                to="/campaigns/create"
+                style={{ color: "#004c46" }}
+              >
+                Create Campaign
+              </Nav.Link>
+            </Nav>
+          )}
           <Nav className="ms-auto nav-item" activeKey={location.pathname}>
             {user ? (
               <>

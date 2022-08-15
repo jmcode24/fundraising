@@ -24,7 +24,6 @@ const Create = () => {
   ];
   const [category, setCategory] = useState("");
   const [imageUrl, setImageUrl] = useState(null);
-  // const [user, setUser] = useState(true);
   const user = useSelector((state) => state.user);
 
   const selectCategory = (category) => {

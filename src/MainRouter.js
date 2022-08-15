@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "layouts/MainLayout/MainLayout";
-import ProtectedRoute from "component/ProtectedRoute";
 import Create from "campaign/Create";
 import MyCampaigns from "campaign/MyCampaigns";
 import Details from "campaign/Details";
