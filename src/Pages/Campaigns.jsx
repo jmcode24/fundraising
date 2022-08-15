@@ -13,7 +13,7 @@ const Campaigns = () => {
             fontWeight: "bold",
           }}
         >
-          Trending Campaigns
+          Campaigns
         </h1>
         <Row className="py-2">
           <CampaignCard />

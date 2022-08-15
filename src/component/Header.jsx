@@ -19,7 +19,7 @@ export default function Header() {
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        background: location.pathname === "/" ? "#e0ffd6" : "#fff",
+        // background: location.pathname === "/" ? "#e0ffd6" : "#fff",
       }}
     >
       <Container>
@@ -53,24 +53,24 @@ export default function Header() {
               to="/campaigns"
               style={{ color: "#004c46" }}
             >
-              Explore
+              Home
             </Nav.Link>
 
             <Nav.Link
               eventKey={2}
               as={Link}
-              to="/#how-it-works"
+              to="/my-campaigns"
               style={{ color: "#004c46" }}
             >
-              How it works?
+              My Campaigns
             </Nav.Link>
             <Nav.Link
               eventKey={3}
               as={Link}
-              to="/#about"
+              to="/campaigns/create"
               style={{ color: "#004c46" }}
             >
-              About
+              Create Campaign
             </Nav.Link>
           </Nav>
           <Nav className="ms-auto nav-item" activeKey={location.pathname}>
@@ -79,7 +79,7 @@ export default function Header() {
                 <Nav.Link
                   as={Link}
                   eventKey={4}
-                  to="/profile"
+                  to="/#profile"
                   className="d-flex align-items-center text-decoration-none"
                 >
                   <div>
