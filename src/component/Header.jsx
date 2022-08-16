@@ -23,9 +23,11 @@ export default function Header() {
       bg="#fff"
       collapseOnSelect
       expand="lg"
+      fixed="top"
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        background: "#fff",
         // background: location.pathname === "/" ? "#e0ffd6" : "#fff",
       }}
     >

@@ -13,7 +13,7 @@ function MainLayout(props) {
 
       <Header />
 
-      <div style={{ minHeight: "70vh" }}>
+      <div style={{ minHeight: "70vh", paddingTop: "4rem" }}>
         <Outlet />
       </div>
 
