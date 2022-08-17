@@ -1,5 +1,5 @@
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import { BsFillTagFill } from "react-icons/bs";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useState } from "react";

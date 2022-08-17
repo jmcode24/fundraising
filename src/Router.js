@@ -1,21 +1,21 @@
-import LandingPage from "pages/LandingPage";
-import Campaigns from "pages/Campaigns";
-import CampaignDetails from "pages/CampaignDetails";
-import Login from "pages/Login";
-import Register from "pages/Register";
+import LandingPage from "./pages/LandingPage";
+import Campaigns from "./pages/Campaigns";
+import CampaignDetails from "./pages/CampaignDetails";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ProfileLayout from "layouts/ProfileLayout/ProfileLayout";
-import ProfilePage from "pages/ProfilePage";
-import DashboardCampaigns from "pages/DashboardCampaigns";
-import DashboardDonations from "pages/DashboardDonations";
-import DashboardAnalytics from "pages/DashboardAnalytics";
-import DashboardSettings from "pages/DashboardSettings";
-import MainLayout from "layouts/MainLayout/MainLayout";
-import CreateCampaign from "pages/CreateCampaign";
-import EditCampaign from "pages/EditCampaign";
-import ProtectedRoute from "component/ProtectedRoute";
-import ViewCampaign from "pages/ViewCampaign";
+import ProfileLayout from "./layouts/ProfileLayout/ProfileLayout";
+import ProfilePage from "./pages/ProfilePage";
+import DashboardCampaigns from "./pages/DashboardCampaigns";
+import DashboardDonations from "./pages/DashboardDonations";
+import DashboardAnalytics from "./pages/DashboardAnalytics";
+import DashboardSettings from "./pages/DashboardSettings";
+import MainLayout from "./layouts/MainLayout/MainLayout";
+import CreateCampaign from "./pages/CreateCampaign";
+import EditCampaign from "./pages/EditCampaign";
+import ProtectedRoute from "./component/ProtectedRoute";
+import ViewCampaign from "./pages/ViewCampaign";
 
 function Router() {
   return (

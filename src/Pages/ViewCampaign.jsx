@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { BsFillTagFill } from "react-icons/bs";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { Link } from "react-router-dom";
 

@@ -11,9 +11,9 @@ import {
 import { Helmet } from "react-helmet";
 import { FaSeedling } from "react-icons/fa";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import SideBar from "component/SideBar";
-import ProfileImage from "images/profile.jpg";
-import { logout, setUser } from "redux/actions";
+import SideBar from "../../component/SideBar";
+import ProfileImage from "../../images/profile.jpg";
+import { logout, setUser } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 function ProfileLayout(props) {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Row, Col, Form, Container } from "react-bootstrap";
-import ProfileImage from "images/profile.jpg";
+import ProfileImage from "../images/profile.jpg";
 
 const DashboardSettings = () => {
   return (

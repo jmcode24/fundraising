@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate, Navigate } from "react-router-dom";
-import { registerUser, setUser } from "redux/actions";
+import { registerUser, setUser } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Register = () => {

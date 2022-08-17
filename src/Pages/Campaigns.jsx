@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import CampaignCard from "component/CampaignCard";
+import CampaignCard from "../component/CampaignCard";
 
 const Campaigns = () => {
   return (

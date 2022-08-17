@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row, Table, Card } from "react-bootstrap";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

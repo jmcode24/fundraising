@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "layouts/MainLayout/MainLayout";
-import Create from "campaign/Create";
-import MyCampaigns from "campaign/MyCampaigns";
-import Details from "campaign/Details";
-import AllCampaigns from "campaign/AllCampaigns";
-import Login from "campaign/Login";
-import Register from "campaign/Register";
+import MainLayout from "./layouts/MainLayout/MainLayout";
+import Create from "./campaign/Create";
+import MyCampaigns from "./campaign/MyCampaigns";
+import Details from "./campaign/Details";
+import AllCampaigns from "./campaign/AllCampaigns";
+import Login from "./campaign/Login";
+import Register from "./campaign/Register";
 
 function Router() {
   return (

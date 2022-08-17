@@ -3,7 +3,7 @@ import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { FaRegUser, FaSeedling, FaSignOutAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, setUser } from "redux/actions";
+import { logout, setUser } from "../redux/actions";
 
 export default function Header() {
   let location = useLocation();

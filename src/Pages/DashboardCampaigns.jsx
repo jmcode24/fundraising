@@ -1,6 +1,6 @@
 import { Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import { motion } from "framer-motion";
 
 const DashboardCampaign = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Alert, Spinner } from "react-bootstrap";
 import { Link, useNavigate, Navigate } from "react-router-dom";
-import { login, setUser } from "redux/actions";
+import { login, setUser } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {

@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, Col, Container, Row, Image } from "react-bootstrap";
-import CampaignCard from "component/CampaignCard";
+import CampaignCard from "../component/CampaignCard";
 
-import Help from "images/help.jpeg";
-import Coinbase from "images/coinbase.png";
-import Paypal from "images/paypal.png";
-import Vodafone from "images/vodafone.png";
-import Stripe from "images/stripelogo.png";
-import Airtel from "images/airtel.png";
+import Help from "../images/help.jpeg";
+import Coinbase from "../images/coinbase.png";
+import Paypal from "../images/paypal.png";
+import Vodafone from "../images/vodafone.png";
+import Stripe from "../images/stripelogo.png";
+import Airtel from "../images/airtel.png";
 import { IoMdSchool } from "react-icons/io";
 import { FaHandsHelping, FaStethoscope } from "react-icons/fa";
 import {

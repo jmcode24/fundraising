@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { motion } from "framer-motion";
 

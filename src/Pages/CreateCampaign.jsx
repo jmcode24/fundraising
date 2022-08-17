@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Image } from "react-bootstrap";
-import Help from "images/help.jpeg";
+import Help from "../images/help.jpeg";
 import { Navigate } from "react-router-dom";
 
 const CreateCampaign = () => {

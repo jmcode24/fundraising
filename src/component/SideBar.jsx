@@ -6,7 +6,7 @@ import { BiLogOutCircle } from "react-icons/bi";
 import { FaRegCompass } from "react-icons/fa";
 import { RiBarChartFill, RiSendPlaneFill } from "react-icons/ri";
 import { NavLink, useLocation } from "react-router-dom";
-import { logout, setUser } from "redux/actions";
+import { logout, setUser } from "../redux/actions";
 import { useDispatch } from "react-redux";
 
 const SideBar = () => {
