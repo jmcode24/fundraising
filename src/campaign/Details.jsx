@@ -1,9 +1,9 @@
 import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import Help from "images/help.jpeg";
-import ProfileImage from "images/profile.jpg";
 import { BsFillTagFill } from "react-icons/bs";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useState } from "react";
+import { FaRegUser } from "react-icons/fa";
 
 const Details = () => {
   const [show, setShow] = useState(false);
@@ -87,20 +87,18 @@ const Details = () => {
               style={{ fontSize: "12px" }}
             >
               <div className="d-flex align-items-center">
-                <img
-                  src={ProfileImage}
-                  alt="profile"
+                <div
                   style={{
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
                     background: "#f1f1f1",
-                    marginRight: "10px",
-                    fontSize: "14px",
-                    overflow: "hidden",
+                    padding: "0px",
                   }}
-                />
-
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 p-0 text-dark">Jane Doe</p>
                   <p className="m-0 p-0 text-muted">28 min ago</p>
@@ -114,20 +112,18 @@ const Details = () => {
               style={{ alignItems: "center", fontSize: "12px" }}
             >
               <div className="d-flex align-items-center">
-                <img
-                  src={ProfileImage}
-                  alt="profile"
+                <div
                   style={{
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
                     background: "#f1f1f1",
-                    marginRight: "10px",
-                    fontSize: "14px",
-                    overflow: "hidden",
+                    padding: "0px",
                   }}
-                />
-
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 p-0 text-dark">Jane Doe</p>
                   <p className="m-0 p-0 text-muted">28 min ago</p>
@@ -141,20 +137,18 @@ const Details = () => {
               style={{ alignItems: "center", fontSize: "12px" }}
             >
               <div className="d-flex align-items-center">
-                <img
-                  src={ProfileImage}
-                  alt="profile"
+                <div
                   style={{
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
                     background: "#f1f1f1",
-                    marginRight: "10px",
-                    fontSize: "14px",
-                    overflow: "hidden",
+                    padding: "0px",
                   }}
-                />
-
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 p-0 text-dark">Jane Doe</p>
                   <p className="m-0 p-0 text-muted">28 min ago</p>
@@ -168,20 +162,18 @@ const Details = () => {
               style={{ alignItems: "center", fontSize: "12px" }}
             >
               <div className="d-flex align-items-center">
-                <img
-                  src={ProfileImage}
-                  alt="profile"
+                <div
                   style={{
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
                     background: "#f1f1f1",
-                    marginRight: "10px",
-                    fontSize: "14px",
-                    overflow: "hidden",
+                    padding: "0px",
                   }}
-                />
-
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 p-0 text-dark">Jane Doe</p>
                   <p className="m-0 p-0 text-muted">28 min ago</p>
@@ -195,20 +187,18 @@ const Details = () => {
               style={{ alignItems: "center", fontSize: "12px" }}
             >
               <div className="d-flex align-items-center">
-                <img
-                  src={ProfileImage}
-                  alt="profile"
+                <div
                   style={{
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
                     background: "#f1f1f1",
-                    marginRight: "10px",
-                    fontSize: "14px",
-                    overflow: "hidden",
+                    padding: "0px",
                   }}
-                />
-
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 p-0 text-dark">Jane Doe</p>
                   <p className="m-0 p-0 text-muted">28 min ago</p>
@@ -246,7 +236,7 @@ const Details = () => {
               style={{ borderBottom: "1px solid #f1f1f1" }}
             >
               <div className="my-3 d-flex align-items-center">
-                <img
+                {/* <img
                   src={ProfileImage}
                   alt="profile"
                   style={{
@@ -258,8 +248,19 @@ const Details = () => {
                     fontSize: "14px",
                     overflow: "hidden",
                   }}
-                />
-
+                /> */}
+                <div
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                    borderRadius: "50%",
+                    background: "#f1f1f1",
+                    padding: "0px",
+                  }}
+                  className="me-2 d-flex align-items-center justify-content-center"
+                >
+                  <FaRegUser size={22} />
+                </div>
                 <div>
                   <p className="m-0 text-dark">Jane Doe</p>
                 </div>

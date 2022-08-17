@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import { FaSeedling, FaSignOutAlt } from "react-icons/fa";
-import ProfileImage from "images/profile.jpg";
+import { FaRegUser, FaSeedling, FaSignOutAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, setUser } from "redux/actions";
 
@@ -87,29 +86,42 @@ export default function Header() {
           <Nav className="ms-auto nav-item" activeKey={location.pathname}>
             {user ? (
               <>
-                <Nav.Link
-                  as={Link}
+                <div
+                  // as={Link}
+                  // eventKey={4}
+                  // to="/#logout"
                   onClick={handleLogout}
-                  eventKey={4}
-                  to="/#logout"
                   className="d-flex align-items-center text-decoration-none"
                 >
-                  <div style={{ marginRight: "10px" }}>
+                  <div style={{ cursor: "pointer", marginRight: "10px" }}>
                     <p className="m-0 text-dark">Logout</p>
                   </div>
                   <FaSignOutAlt />
-                </Nav.Link>
+                </div>
 
                 <Nav.Link
                   as={Link}
                   eventKey={4}
-                  to="/#profile"
-                  className="d-flex align-items-center text-decoration-none"
+                  to="/my-campaigns"
+                  className="d-flex align-items-center text-decoration-none ms-3"
+                  style={{ cursor: "pointer" }}
                 >
                   <div>
                     <p className="m-0 text-dark">Jane Doe</p>
                   </div>
-                  <img
+                  <div
+                    style={{
+                      width: "45px",
+                      height: "45px",
+                      borderRadius: "50%",
+                      background: "#f1f1f1",
+                      padding: "0px",
+                    }}
+                    className="ms-2 d-flex align-items-center justify-content-center"
+                  >
+                    <FaRegUser size={22} />
+                  </div>
+                  {/* <img
                     src={ProfileImage}
                     alt="profile"
                     style={{
@@ -121,7 +133,7 @@ export default function Header() {
                       fontSize: "14px",
                       overflow: "hidden",
                     }}
-                  />
+                  /> */}
                 </Nav.Link>
               </>
             ) : (

@@ -1,8 +1,6 @@
 import { Button, Row, Col, Card, Container, Pagination } from "react-bootstrap";
 import { Link, Navigate } from "react-router-dom";
 import Help from "images/help.jpeg";
-import WithdrawIcon from "images/withdraw.png";
-import EditIcon from "images/edit.png";
 import { motion } from "framer-motion";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useSelector } from "react-redux";
